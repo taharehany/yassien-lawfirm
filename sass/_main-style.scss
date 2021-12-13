@@ -177,7 +177,7 @@ header {
 	.navbar {
 		padding: 0;
 		position: fixed;
-		top: 109px;
+		top: 123px;
 		width: 100%;
 		@include transition(top linear 0.2s);
 
@@ -515,7 +515,7 @@ header {
 //main slider
 section.main-slider {
 	background-color: #f9f9f9;
-	margin-top: -75px;
+	// margin-top: -75px;
 	height: 115vh;
 
 	.owl-item {
@@ -551,7 +551,7 @@ section.main-slider {
 	.main-slider-carousel {
 		position: absolute;
 		left: 0;
-		top: 0; 
+		top: 0;
 		width: 100%;
 		height: 100%;
 		z-index: 9;
@@ -687,6 +687,15 @@ section.main-slider {
 section.about {
 	padding: $padding_section;
 	background-color: #fff;
+	position: relative;
+
+	.just {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		max-width: 300px;
+		@include animation(shake 10s ease infinite);
+	}
 
 	.content {
 		.main-title {
@@ -711,6 +720,7 @@ section.about {
 			position: relative;
 			z-index: 1;
 			padding: 40px;
+			@include transition(all ease 0.3s);
 
 			&::after {
 				content: "";
@@ -722,6 +732,10 @@ section.about {
 				border: 20px $main_color solid;
 				min-width: calc(100% - 70px);
 				z-index: -1;
+			}
+
+			&:hover {
+				// padding: 20px;
 			}
 
 			img {
@@ -764,6 +778,28 @@ section.about {
 				}
 			}
 		}
+	}
+}
+
+@-webkit-keyframes shake {
+	50% {
+		-webkit-transform: translateY(-50px);
+	}
+
+	0%,
+	100% {
+		-webkit-transform: translateY(0px);
+	}
+}
+
+@keyframes shake {
+	50% {
+		transform: translateY(-50px);
+	}
+
+	0%,
+	100% {
+		transform: translateY(0px);
 	}
 }
 
@@ -955,14 +991,11 @@ section.counter-numbers {
 
 //about
 
-//services
-section.services {
+//blogs
+section.blogs {
 	padding: $padding_section;
-	background-color: rgb(134 211 243 / 10%);
+	background-color: rgba(21, 92, 180, 0.05);
 
-	.main-title {
-		text-align: center;
-	}
 
 	@supports (grid-row-gap: 45px) {
 		.row {
@@ -978,12 +1011,34 @@ section.services {
 		}
 	}
 
+	.main-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		.btns-part {
+			.btn {
+				font-size: 14px;
+				font-weight: 600;
+				text-transform: capitalize;
+				@include transition(all ease 0.3s);
+				@include borderRadius(0);
+				padding: 15px 25px;
+				background-color: $main_color;
+				color: #fff;
+
+				&:hover {
+					background-color: $dark_color;
+					color: #fff;
+					border-color: $dark_color
+				}
+			}
+		}
+	}
+
 	.content {
-		.service-box {
+		.blog-box {
 			position: relative;
-			@include boxshadow(0 15px 25px rgb(0 0 0 / 13%));
-			background-color: #fff;
-			text-align: center;
 			@include transition(all ease 0.3s);
 
 			&:hover {
@@ -1013,7 +1068,30 @@ section.services {
 
 			.image {
 				overflow: hidden;
-				padding: 15px;
+				position: relative;
+
+				&:hover {
+					.layer {
+						top: 0;
+					}
+				}
+
+				.layer {
+					position: absolute;
+					left: 0;
+					top: -100%;
+					background-color: rgba(21, 92, 180, 0.8);
+					@extend %center;
+					width: 100%;
+					height: 100%;
+					@include transition(all ease 0.3s);
+
+					i {
+						font-size: 50px;
+						color: #fff;
+						@include transform(rotate(50deg))
+					}
+				}
 
 				img {
 					@extend %fitimage;
@@ -1022,15 +1100,22 @@ section.services {
 			}
 
 			.details {
-				background-color: #fff;
-				padding: 25px 15px;
+				background-color: transparent;
+				padding: 25px 0;
 
 				.title {
 					min-height: 30px;
+					margin-bottom: 20px;
+
+					&:hover {
+						a {
+							color: $main_color;
+						}
+					}
 
 					a {
-						color: #222222;
-						font-size: 18px;
+						color: #000;
+						font-size: 20px;
 						font-weight: 700;
 						text-transform: capitalize;
 						@extend %max_lines;
@@ -1046,32 +1131,34 @@ section.services {
 					min-height: 65px;
 				}
 
-				.btns {
-					.btn {
-						font-size: 14px;
-						font-weight: 600;
-						border: 2px solid #eee;
-						text-transform: capitalize;
-						@include transition(all ease 0.3s);
-						@include borderRadius(0);
-						padding: 10px 25px;
+				.meta {
+					padding: 0;
+					display: flex;
 
-						&:hover {
-							background-color: $dark_color;
-							color: #fff;
-							border-color: $dark_color
-						}
+					li {
+						position: relative;
+						display: inline-block;
+						color: $second_color;
+						font-size: 14px;
+						text-transform: capitalize;
 
 						i {
-							margin-inline-start: 5px;
-							font-size: 14px
+							margin-inline-end: 5px;
+						}
+					}
+
+					.auther {
+						margin-inline-start: 25px;
+
+						a {
+							color: $second_color;
 						}
 					}
 				}
 			}
 		}
 
-		.services-btn {
+		.blogs-btn {
 			@extend .item-btn;
 			text-align: center;
 			margin-top: 50px;
@@ -1097,7 +1184,7 @@ section.services {
 	}
 }
 
-//services
+//blogs
 
 //why
 section.why-us {
@@ -1529,19 +1616,38 @@ section.subscribe {
 
 //subscribe
 
-//blogs
-section.blogs {
+//news
+section.news {
 	padding: $padding_section;
 	background-color: #fff;
-	// background-image: url(../images/bgs/pattern-bg.png);
-	// background-size: cover;
 
 	.main-title {
-		// text-align: center
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+
+		.btns-part {
+			.btn {
+				font-size: 14px;
+				font-weight: 600;
+				text-transform: capitalize;
+				@include transition(all ease 0.3s);
+				@include borderRadius(0);
+				padding: 15px 25px;
+				background-color: $main_color;
+				color: #fff;
+
+				&:hover {
+					background-color: $dark_color;
+					color: #fff;
+					border-color: $dark_color
+				}
+			}
+		}
 	}
 
 	.content {
-		.blogs-box {
+		.news-box {
 			@include transition(all ease 0.3s);
 			direction: initial;
 			display: grid;
@@ -1549,8 +1655,6 @@ section.blogs {
 			margin-bottom: 25px;
 
 			&:hover {
-				// @include boxshadow(0 2px 10px rgb(0 0 0 / 10%));
-
 				.read-more {
 					top: 0;
 
@@ -1636,6 +1740,7 @@ section.blogs {
 						@extend %max_lines;
 						-webkit-line-clamp: 2;
 						min-height: 40px;
+						line-height: 1.5;
 
 						&:hover {
 							color: $main_color;
@@ -1659,7 +1764,7 @@ section.blogs {
 			}
 		}
 
-		.blogs-btn {
+		.news-btn {
 			@extend .item-btn;
 			text-align: center;
 			margin-top: 40px;
@@ -1730,7 +1835,7 @@ section.blogs {
 	}
 }
 
-//blogs
+//news
 
 //footer
 footer {
@@ -1782,13 +1887,20 @@ footer {
 
 				.links {
 					a {
-						color: #ddd;
-						font-size: 16px;
-						margin-inline-end: 15px;
+						color: rgb(165, 165, 165);
+						font-size: 14px;
+						margin-inline-end: 10px;
 						@include transition(all ease .3s);
+						background-color: #293750;
+						@include borderRadius(50%);
+						height: 35px;
+						width: 35px;
+						@extend %center;
+						display: inline-flex;
 
 						&:hover {
-							color: $main_color;
+							color: #fff;
+							background-color: $main_color;
 							opacity: 1;
 						}
 					}
@@ -1857,27 +1969,71 @@ footer {
 				}
 			}
 
-			.working-hours {
+		}
+
+		.contact {
+			p {
 				list-style: none;
-				padding: 0;
+				margin-bottom: 10px;
+				font-size: 16px;
+				color: #fff;
+				margin-bottom: 20px;
 
-				li {
-					position: relative;
-					color: #ffffff;
-					font-size: 18px;
-					font-weight: 600;
-					line-height: 1.6em;
-					margin-bottom: 20px;
+				i {
+					margin-inline-end: 10px;
+					color: $main_color;
+				}
+			}
 
-					span {
-						position: relative;
-						display: block;
-						margin-top: 7px;
-						font-weight: 400;
-					}
+			a {
+				color: #fff;
+			}
+		}
+
+		.send-us {
+			padding-top: 15px;
+
+			.form-control {
+				border: 1px solid rgb(128, 128, 128);
+				background-color: transparent;
+				color: #eee;
+				font-weight: inherit;
+				padding: 0 15px;
+				height: 50px;
+				@include borderRadius(0);
+
+				&::placeholder {
+					color: #eee;
+				}
+
+				&:focus {
+					box-shadow: none;
+					outline: none
+				}
+			}
+
+			.btn {
+				@include borderRadius(0);
+				height: 50px;
+				line-height: 50px;
+				color: #fff;
+				border-color: $main_color;
+				background-color: $main_color;
+				padding: 0 20px;
+				font-size: 16px;
+
+				&:focus {
+					box-shadow: none;
+					outline: none
+				}
+
+				i {
+					line-height: 50px;
+					display: block;
 				}
 			}
 		}
+
 	}
 
 	.copyright {
