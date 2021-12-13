@@ -1016,6 +1016,10 @@ section.blogs {
 		justify-content: space-between;
 		align-items: flex-end;
 
+		h2 {
+			margin-bottom: 0;
+		}
+
 		.btns-part {
 			.btn {
 				font-size: 14px;
@@ -1629,6 +1633,10 @@ section.news {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+
+		h2 {
+			margin-bottom: 0;
+		}
 
 		.btns-part {
 			.btn {
