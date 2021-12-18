@@ -572,7 +572,6 @@ section.main-slider {
 			text-align: center;
 			margin: auto;
 			direction: initial;
-			// background-color: rgba(255, 255, 255, 0.9);
 			padding: 30px;
 		}
 
@@ -1047,27 +1046,6 @@ section.blogs {
 
 			&:hover {
 				@include boxshadow(none);
-			}
-
-			.trending-label {
-				position: absolute;
-				top: 0;
-				right: 0;
-				z-index: 2;
-				width: 0;
-				height: 0;
-				border-width: 0 60px 60px 0;
-				border-style: solid;
-				border-color: transparent;
-				border-right-color: #FFA942;
-
-				i {
-					position: absolute;
-					top: 11px;
-					left: 35px;
-					color: #fff;
-					font-size: 14px;
-				}
 			}
 
 			.image {
@@ -1970,12 +1948,17 @@ footer {
 						text-transform: capitalize;
 						@extend %max_lines;
 						-webkit-line-clamp: 1;
+						@include transition(all ease .3s);
 
 						&.btn {
 							padding-left: 0;
 							padding-top: 0;
 							color: $main_color;
 							font-weight: 600;
+						}
+
+						&:hover {
+							color: $main_color;
 						}
 					}
 				}
