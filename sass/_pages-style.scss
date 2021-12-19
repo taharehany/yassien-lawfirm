@@ -393,17 +393,6 @@ section.expertise {
 
         .top-title {
             justify-content: center;
-
-            &::after {
-                display: inline-block;
-                content: "";
-                left: 0;
-                top: 50%;
-                height: 3px;
-                width: 50px;
-                background-color: $main_color;
-                margin-inline-start: 20px;
-            }
         }
     }
 
@@ -986,17 +975,6 @@ section.team {
 
         .top-title {
             justify-content: center;
-
-            &::after {
-                display: inline-block;
-                content: "";
-                left: 0;
-                top: 50%;
-                height: 3px;
-                width: 50px;
-                background-color: $main_color;
-                margin-inline-start: 20px;
-            }
         }
     }
 
@@ -1004,8 +982,10 @@ section.team {
         .head-team-box {
             .image {
                 height: 100%;
+
                 img {
                     @extend %fitimage;
+                    background-color: #dae4ed;
                     // min-height: 500px;
                 }
             }
@@ -1067,6 +1047,10 @@ section.team {
                 width: 250px;
                 margin: 0 auto 25px;
 
+                a {
+                    cursor: pointer;
+                }
+
                 img {
                     @include borderRadius(50%);
                     @extend %fitimage;
@@ -1108,7 +1092,427 @@ section.team {
     }
 }
 
+.modal {
+    .modal-body {
+        padding: 0;
+    }
+
+    .team {
+        background-color: #fff;
+
+        .content {
+            .head-team-box {
+                .details {
+                    display: block;
+
+                    .title {
+                        margin-bottom: 20px;
+                    }
+
+                    .text {
+                        position: relative;
+
+                        h4 {
+                            font-weight: bold;
+                            font-size: 20px;
+                            line-height: 30px;
+                            position: relative;
+                            margin-bottom: 32px;
+
+                            &::after {
+                                position: absolute;
+                                content: '';
+                                width: 116px;
+                                height: 1px;
+                                left: 0px;
+                                bottom: -12px;
+                                transition: all 500ms ease;
+                                background-color: $main_color;
+                            }
+                        }
+
+                        ul {
+                            padding: 0;
+
+                            li {
+                                list-style: none;
+                                position: relative;
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                                padding: 15px 0;
+
+                                &::before {
+                                    content: "";
+                                    left: 0;
+                                    width: 5px;
+                                    height: 5px;
+                                    @include borderRadius(50%);
+                                    background-color: $main_color;
+                                    display: inline-block;
+                                    margin-inline-end: 15px;
+                                }
+                            }
+                        }
+                    }
+
+                    .social {
+                        padding: 0 0 0 25px;
+
+                        a {
+                            color: #6D727C;
+                            padding: 0 5px;
+
+                            &:hover {
+                                color: $main_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .more-info {
+        background-color: #f7f7f7;
+        padding: 25px 0;
+
+        .content {
+            .accordion {
+                max-width: 770px;
+
+                .accordion-item {
+                    margin-bottom: 15px;
+                    @include borderRadius(35px);
+                    overflow: hidden;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    .accordion-button {
+                        padding: 20px 25px;
+                        font-weight: 600;
+
+                        &:focus,
+                        &.collapsed {
+                            box-shadow: none;
+                            color: $second_color;
+                        }
+
+                        &::after {
+                            margin-right: 0;
+                        }
+
+                        i {
+                            margin-inline-end: 10px;
+                            color: $main_color;
+                        }
+                    }
+
+                    .accordion-body {
+                        padding: 25px 35px;
+                    }
+                }
+            }
+
+            .contact {
+                h4 {
+                    font-weight: bold;
+                    font-size: 20px;
+                    line-height: 30px;
+                    position: relative;
+                    margin-bottom: 32px;
+                    text-transform: capitalize;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 116px;
+                        height: 1px;
+                        left: 0px;
+                        bottom: -12px;
+                        transition: all 500ms ease;
+                        background-color: $main_color;
+                    }
+                }
+
+                p {
+                    list-style: none;
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                    color: #111;
+                    margin-bottom: 20px;
+
+                    i {
+                        margin-inline-end: 10px;
+                        color: $second_color;
+                    }
+                }
+
+                a {
+                    color: #111;
+                }
+            }
+        }
+    }
+}
+
 //team
+
+//careers
+section.careers {
+    padding: $padding_section;
+
+    .sub-title {
+        margin-bottom: 30px;
+
+        h2 {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 30px;
+            position: relative;
+            margin-bottom: 32px;
+            text-transform: capitalize;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 116px;
+                height: 1px;
+                left: 0px;
+                bottom: -12px;
+                transition: all 500ms ease;
+                background-color: $main_color;
+            }
+        }
+    }
+
+    .content {
+        .career-box {
+            background-color: #fff;
+            padding: 30px;
+            @include borderRadius(30px);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            border: 1px solid #ddd;
+            margin-bottom: 25px;
+
+            .details {
+                .head-part {
+                    display: grid;
+                    grid-template-columns: 70px auto;
+                    gap: 15px;
+                    margin-bottom: 20px;
+
+                    .icon {
+                        height: 70px;
+                        @include borderRadius(20px);
+                        background-color: brown;
+                        display: block;
+                        overflow: hidden;
+
+                        img {
+                            @extend %fitimage
+                        }
+                    }
+
+                    .title {
+                        a {
+                            color: #111;
+                            display: inline-block;
+                            font-size: 16px;
+
+                            i {
+                                margin-inline-end: 5px;
+                                font-size: 14px;
+                            }
+                        }
+
+                        h3 {
+                            a {
+                                font-size: 26px;
+                                font-weight: 600;
+                            }
+                        }
+
+                        .place {
+                            margin-inline-end: 30px;
+                        }
+                    }
+                }
+
+                .apply-btn {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .btn {
+                        padding: 0;
+
+                        i {
+                            margin-inline-start: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//careers
+
+//apply
+section.apply {
+    padding: $padding_section;
+
+    .content {
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+
+        .form-area {
+            background-color: #FAF7F3;
+            padding: 30px;
+            @include borderRadius(10px);
+
+            .form-group {
+                margin-bottom: 25px;
+
+                label {
+                    display: block;
+                    text-align: initial;
+                    margin-bottom: 15px;
+                }
+
+                &.button {
+                    .btn {
+                        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.16);
+                        padding: 10px 40px;
+                        background-color: $main_color;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .form-control {
+                border: none;
+                @include transition(all ease .3s);
+                color: #848484;
+                background-color: #fff;
+                font-size: 14px;
+                padding: 15px;
+                border-bottom: 1px solid transparent;
+                @include borderRadius(10px);
+
+                &:hover,
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                    border-color: #5A5A5A
+                }
+
+                &::placeholder {
+                    color: #79859C;
+                }
+            }
+        }
+
+        .upload {
+            text-align: initial;
+            position: relative;
+            @extend %center;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 50px;
+
+            .sr-only {
+                display: none;
+            }
+
+            i {
+                margin-right: 10px;
+                background-color: $second_color;
+                height: 30px;
+                width: 30px;
+                @extend %center;
+                color: #fff;
+            }
+
+            .input-file {
+                input[type="file"] {
+                    opacity: 0;
+                    width: 100%;
+                    height: 30px;
+                    position: absolute;
+                    left: 0;
+                }
+
+                .text {
+                    color: #848484;
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+
+                .file-selected {
+                    font-size: 16px;
+                    margin: 0 15px;
+                }
+            }
+        }
+
+        .successfully {
+            color: #ffffff;
+            padding: 9px 15px;
+            font-size: 16px;
+            margin-bottom: 0;
+            @include borderRadius(25px);
+            margin-top: 25px;
+            box-shadow: 1px 1px 25px -15px #646464;
+            background-color: $main_color;
+        }
+    }
+}
+
+//apply
+
+//terms
+section.terms, section.privacy {
+    padding: $padding_section;
+
+    .content {
+        .details {
+            h2 {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            ul {
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    position: relative;
+                    // border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                    padding: 5px 0;
+
+                    &::before {
+                        content: "";
+                        left: 0;
+                        width: 5px;
+                        height: 5px;
+                        @include borderRadius(50%);
+                        background-color: $main_color;
+                        display: inline-block;
+                        margin-inline-end: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//terms
 
 //contact page
 section.contact-in-page {
@@ -1335,3 +1739,173 @@ section.contact-in-page {
 }
 
 //error
+
+//contact last
+
+.contact-area {
+    padding: $padding_section;
+
+}
+
+.contact-wrapper-three {
+    background-color: rgba(182, 140, 90, 0.07);
+    padding: 70px 70px 80px;
+}
+
+@media (max-width: 767px) {
+    .contact-wrapper-three {
+        padding: 70px 30px 80px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .contact-wrapper-three .section-title h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+.contact-wrapper-three .contact-form {
+    .btn {
+        background-color: $main_color;
+        padding: 15px 30px;
+        color: #fff;
+    }
+}
+
+.contact-wrapper-three .contact-form form .form-control {
+    margin-bottom: 15px;
+    height: 65px;
+}
+
+.contact-wrapper-three .contact-form form .form-control::-webkit-input-placeholder {
+    color: #162542;
+}
+
+.contact-wrapper-three .contact-form form .form-control::-moz-placeholder {
+    color: #162542;
+}
+
+.contact-wrapper-three .contact-form form .form-control:-ms-input-placeholder {
+    color: #162542;
+}
+
+.contact-wrapper-three .contact-form form .form-control::-ms-input-placeholder {
+    color: #162542;
+}
+
+.contact-wrapper-three .contact-form form .form-control::placeholder {
+    color: #162542;
+}
+
+.contact-wrapper-three .contact-form form textarea.form-control {
+    height: 150px;
+}
+
+.contact-info-list .info-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+    .contact-info-list .info-item {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+.contact-info-list .info-item .thumb {
+    width: 40%;
+}
+
+.contact-info-list .info-item .content {
+    width: 60%;
+}
+
+@media (max-width: 767px) {
+
+    .contact-info-list .info-item .thumb,
+    .contact-info-list .info-item .content {
+        width: 100%;
+    }
+}
+
+.contact-info-list .info-item .thumb img {
+    width: 100%;
+}
+
+.contact-info-list .info-item .content {
+    padding-left: 35px;
+}
+
+@media (max-width: 767px) {
+    .contact-info-list .info-item .content {
+        padding-left: 0px;
+        margin-top: 30px;
+    }
+}
+
+.contact-info-list .info-item .content h3 {
+    margin-bottom: 14px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contact-info-list .info-item .content h3 span.sm-title {
+    font-size: 18px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .contact-info-list .info-item .content h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .contact-info-list .info-item .content h3 span.sm-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .contact-info-list .info-item .content h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .contact-info-list .info-item .content h3 span.sm-title {
+        font-size: 16px;
+    }
+}
+
+.contact-info-list .info-item .content p {
+    margin-bottom: 10px;
+
+    a {
+        color: #111;
+    }
+}
+
+.contact-info-list .info-item .content p:hover a {
+    color: #b68c5a;
+}
+
+.contact-info-list .info-item .content p i {
+    margin-right: 10px;
+    color: #b68c5a;
+}
+
+.map-area .map-box iframe {
+    display: inherit;
+    width: 100%;
+    height: 590px;
+    border: none;
+}
+
+.map-area {
+    padding-bottom: 70px;
+}

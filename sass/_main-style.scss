@@ -275,7 +275,7 @@ header {
 					padding: 0;
 					box-shadow: 0 10px 50px 0 rgb(13 38 59 / 10%);
 					@include borderRadius(0);
-					border-top: 2px solid $main_color;
+					border-bottom: 2px solid $main_color;
 					@include transition(all linear 0.2s);
 
 					li {
@@ -516,7 +516,7 @@ header {
 section.main-slider {
 	background-color: #f9f9f9;
 	// margin-top: -75px;
-	height: 115vh;
+	height: 110vh;
 
 	.owl-item {
 		&.active {
@@ -701,11 +701,14 @@ section.about {
 			margin-bottom: 2rem;
 
 			.top-title {
-				display: block;
 				color: $main_color;
 				font-size: 18px;
 				font-weight: 500;
 				margin-bottom: 15px;
+
+				&::after {
+					display: none;
+				}
 			}
 
 			h2 {
@@ -1441,17 +1444,6 @@ section.clients {
 
 		.top-title {
 			justify-content: center;
-
-			&::after {
-				display: inline-block;
-				content: "";
-				left: 0;
-				top: 50%;
-				height: 3px;
-				width: 50px;
-				background-color: $main_color;
-				margin-inline-start: 20px;
-			}
 		}
 	}
 
@@ -1494,17 +1486,6 @@ section.subscribe {
 
 		.top-title {
 			justify-content: center;
-
-			&::after {
-				display: inline-block;
-				content: "";
-				left: 0;
-				top: 50%;
-				height: 3px;
-				width: 50px;
-				background-color: $main_color;
-				margin-inline-start: 20px;
-			}
 		}
 
 		h2 {

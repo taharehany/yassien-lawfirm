@@ -219,4 +219,32 @@ $(window).on("load", function () {
     offset: 50,
     beginAt: 100,
   });
+
+  //file upload
+  $('input[type="file"]').each(function () {
+    // get label text
+    var label = $(this).parents('.form-group').find('label').text();
+    label = (label) ? label : 'Upload your resume';
+
+    // wrap the file input
+    $(this).wrap('<div class="input-file"></div>');
+    // display label
+    $(this).before('<a class="text">' + label + '</a>');
+    // we will display selected file here
+    $(this).before('<span class="file-selected"></span>');
+
+    // file input change listener 
+    $(this).change(function (e) {
+      // Get this file input value
+      var val = $(this).val();
+
+      // Let's only show filename.
+      // By default file input value is a fullpath, something like 
+      // C:\fakepath\Nuriootpa1.jpg depending on your browser.
+      var filename = val.replace(/^.*[\\\/]/, '');
+
+      // Display the filename
+      $(this).siblings('.file-selected').text(filename);
+    });
+  });
 });
