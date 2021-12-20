@@ -247,4 +247,8 @@ $(window).on("load", function () {
       $(this).siblings('.file-selected').text(filename);
     });
   });
+
+
+  //select 2
+  $(".select2").select2();
 });
