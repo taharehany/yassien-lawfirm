@@ -248,7 +248,9 @@ $(window).on("load", function () {
     });
   });
 
-
   //select 2
   $(".select2").select2();
+
+  // Default
+	$("#post_rating .ratyli").ratyli();
 });

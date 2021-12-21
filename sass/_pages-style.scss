@@ -727,65 +727,69 @@ section.single-service {
 
 //search
 section.search-part {
-	.content {
-		padding: 30px;
-		background: #fff;
-		// border: 1px solid #e3e3e3;
-		position: relative;
-		z-index: 1;
+    .content {
+        padding: 30px;
+        background: #fff;
+        // border: 1px solid #e3e3e3;
+        position: relative;
+        z-index: 1;
         margin-top: -50px;
         @include boxshadow(0 5px 20px 0 rgba(23, 44, 82, 0.1));
 
-		.form-group {
-			.form-control {
-				border: 1px solid #ddd;
-				@include borderRadius(0);
-                padding: 7px 15px;padding: 7px 15px;
+        .form-group {
+            .form-control {
+                border: 1px solid #ddd;
+                @include borderRadius(0);
+                padding: 7px 15px;
+                padding: 7px 15px;
 
-				&:focus {
-					box-shadow: none;
-				}
-			}
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
             .form-select {
                 @include borderRadius(0);
                 padding: 7px 15px;
+
                 &:focus {
-					box-shadow: none;
-				}
+                    box-shadow: none;
+                }
             }
-		}
+        }
 
-		.buttons-area {
-			text-align: initial;
+        .buttons-area {
+            text-align: initial;
 
-			.btn {
-				background-color: $main_color;
-				color: #fff;
-				padding: 8px 25px;
-				@include borderRadius(0);
+            .btn {
+                background-color: $main_color;
+                color: #fff;
+                padding: 8px 25px;
+                @include borderRadius(0);
 
-				i {
-					margin-inline-end: 5px;
-					margin-inline-start: 5px;
-					font-size: 14px;
-				}
+                i {
+                    margin-inline-end: 5px;
+                    margin-inline-start: 5px;
+                    font-size: 14px;
+                }
 
-				&.reset {
-					background-color: transparent;
-					border: 1px solid #e0e0e0;
-					color: #000;
-				}
-			}
+                &.reset {
+                    background-color: transparent;
+                    border: 1px solid #e0e0e0;
+                    color: #000;
+                }
+            }
 
-			.spinner-border {
-				width: 1.2rem;
-				height: 1.2rem;
-				margin-inline-end: 5px;
-				border-width: .2em;
-			}
-		}
-	}
+            .spinner-border {
+                width: 1.2rem;
+                height: 1.2rem;
+                margin-inline-end: 5px;
+                border-width: .2em;
+            }
+        }
+    }
 }
+
 .select2-container--default {
     width: 100%;
 
@@ -1108,11 +1112,18 @@ section.team {
         .head-team-box {
             .image {
                 height: 100%;
+                @extend %center;
+                background-image: url(http://demo.ovathemes.com/athens/wp-content/uploads/2021/12/bg-attorney-single-bio.png);
+                background-repeat: no-repeat;
+                background-position: bottom right;
+                background-color: rgba(11, 25, 66, 1);
 
                 img {
                     @extend %fitimage;
                     background-color: #dae4ed;
-                    // min-height: 500px;
+                    width: 250px;
+                    height: 250px;
+                    @include borderRadius(50%)
                 }
             }
 
@@ -1165,12 +1176,13 @@ section.team {
 
         .team-box {
             text-align: center;
+            margin-bottom: 25px;
 
             .image {
                 overflow: hidden;
                 @include borderRadius(50%);
-                height: 250px;
-                width: 250px;
+                height: 220px;
+                width: 220px;
                 margin: 0 auto 25px;
 
                 a {
@@ -1178,6 +1190,7 @@ section.team {
                 }
 
                 img {
+                    border: 2px solid #fff;
                     @include borderRadius(50%);
                     @extend %fitimage;
                     @include transition(all ease 0.4s);
@@ -1195,7 +1208,7 @@ section.team {
                     h3 {
                         font-size: 22px;
                         font-weight: 600;
-                        color: $main_color;
+                        color: #111;
                     }
 
                     p {
@@ -1205,7 +1218,7 @@ section.team {
 
                 .social {
                     a {
-                        color: #6D727C;
+                        color: $second_color;
                         padding: 0 5px;
 
                         &:hover {
@@ -1228,6 +1241,27 @@ section.team {
 
         .content {
             .head-team-box {
+                .image {
+                    flex-direction: column;
+
+                    img {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .social {
+                    padding: 0;
+
+                    a {
+                        color: #fff;
+                        padding: 0 5px;
+
+                        &:hover {
+                            color: $main_color;
+                        }
+                    }
+                }
+
                 .details {
                     display: block;
 
@@ -1276,19 +1310,6 @@ section.team {
                                     display: inline-block;
                                     margin-inline-end: 15px;
                                 }
-                            }
-                        }
-                    }
-
-                    .social {
-                        padding: 0 0 0 25px;
-
-                        a {
-                            color: #6D727C;
-                            padding: 0 5px;
-
-                            &:hover {
-                                color: $main_color;
                             }
                         }
                     }
@@ -1544,6 +1565,7 @@ section.apply {
                     color: #79859C;
                 }
             }
+
             textarea {
                 height: auto !important;
             }
@@ -1986,6 +2008,40 @@ section.single-blog {
                 }
             }
         }
+
+        .rating-area {
+            display: flex;
+            align-items: center;
+
+            h3 {
+                margin-bottom: 0;
+                margin-inline-end: 15px;
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            .ratyli {
+                .rate {
+                    color: #fff;
+                    font-size: 36px;
+                    cursor: pointer;
+                }
+
+                .rate-empty {
+                    color: #666;
+                }
+
+                &.rated {
+                    .rate-full {
+                        color: $main_color;
+                    }
+                }
+
+                .rate-active {
+                    color: $main_color;
+                }
+            }
+        }
     }
 
     .sidebar-widget {
@@ -2003,12 +2059,29 @@ section.single-blog {
                 @include borderRadius(0);
                 overflow: hidden;
 
+                &:hover {
+                    .text {
+                        .subtitle {
+                            color: $main_color
+                        }
+                    }
+
+                    .image {
+                        img {
+                            @include transform(scale(1.2));
+                        }
+                    }
+                }
+
                 &:last-child {
                     margin-bottom: 0;
                 }
 
                 .image {
+                    overflow: hidden;
+
                     img {
+                        @include transition(all ease 0.3s);
                         @include borderRadius(0);
                     }
                 }
@@ -2036,6 +2109,7 @@ section.single-blog {
                         min-height: 27px;
                         margin-bottom: 5px;
                         font-weight: 600;
+                        @include transition(all ease 0.3s);
                     }
 
                     .details {
@@ -2081,6 +2155,7 @@ section.single-blog {
             }
         }
     }
+
 }
 
 //single blog
