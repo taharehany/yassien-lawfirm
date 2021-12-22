@@ -1,0 +1,107 @@
+extend index
+
+block website_title
+    title #{website_title} | client portal
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 welcome, client name
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active" aria-current="page") client portal
+    //breadcrumb
+
+    //client portal
+    section(class="client-portal")
+        div(class="container")
+            div(class="content")
+                div(class="nav nav-pills", id="profile_portal_tabs" role="tablist", aria-orientation="vertical")
+                    button#client-portal-3-tab(class="nav-link active", data-bs-toggle="pill", data-bs-target="#client-portal-3", type="button", role="tab", aria-controls="client-portal-3", aria-selected="false") all cases
+                    button(class="nav-link", id="client-portal-1-tab" data-bs-toggle="pill", data-bs-target="#client-portal-1", type="button", role="tab", aria-controls="client-portal-1", aria-selected="false") upload file
+                form(class="g-3" action="" novalidate)
+                    div(class="tab-content" id="profile_tabsContent")
+                        div(class="tab-pane fade show active", id="client-portal-3" role="tabpanel", aria-labelledby="client-portal-3-tab") 
+                            div(class="table-area")
+                                table(class="table table-hover" id="client_dataTable")
+                                    thead
+                                        tr
+                                            th open Date 
+                                            th case
+                                            th type
+                                            th status 
+                                    tbody
+                                        tr
+                                            td Apr 1, 2019
+                                            td 
+                                                a(href="" class="case-name") 
+                                                    | An example alert with an icon
+                                            td case type
+                                            td 
+                                                span(class='badge rounded-pill bg-danger') closed
+                                        tr
+                                            td Apr 1, 2018
+                                            td 
+                                                a(href="" class="case-name") 
+                                                    | An example alert with an icon
+                                            td case type
+                                            td 
+                                                span(class='badge rounded-pill bg-success') in progress
+                                        tr
+                                            td Apr 1, 2017
+                                            td 
+                                                a(href="" class="case-name") 
+                                                    | An example alert with an icon
+                                            td case type
+                                            td 
+                                                span(class='badge rounded-pill bg-success') in progress
+                                        tr
+                                            td Apr 1, 2018
+                                            td 
+                                                a(href="" class="case-name") 
+                                                    | An example alert with an icon
+                                            td case type
+                                            td 
+                                                span(class='badge rounded-pill bg-success') in progress
+                                        tr
+                                            td Apr 1, 2018
+                                            td 
+                                                a(href="" class="case-name") 
+                                                    | An example alert with an icon
+                                            td case type
+                                            td 
+                                                span(class='badge rounded-pill bg-danger') closed
+                            div(class="")
+                                nav(aria-label="Page navigation" class="navigation")
+                                    ul(class="pagination")
+                                        li(class="page-item")
+                                            a(class="page-link arr", href="#!", aria-label="Previous")
+                                                span(aria-hidden="true") &laquo;
+                                        li(class="page-item active")
+                                            a(class="page-link", href="#!") 1
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 2
+                                        li(class="page-item")
+                                            a(class="page-link", href="#!") 3
+                                        li(class="page-item")
+                                            a(class="page-link arr", href="#!", aria-label="Next")
+                                                span(aria-hidden="true") &raquo;
+                        div(class="tab-pane fade", id="client-portal-1" role="tabpanel", aria-labelledby="client-portal-1-tab") 
+                            div(class="row")
+                                div(class="col-lg-12")
+                                    h3(class="subtitle") upload file
+                                    div(class="alert alert-warning alert-dismissible fade show", role="alert")
+                                        strong Holy guacamole!
+                                        | You should check in on some of those fields below.
+                                        button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")
+                                div(class="col-lg-12")
+                                    div(class="form-group")
+                                        input(type="file" class="form-control")
+                                div(class="col-lg-12")
+                                    div(class="form-group")
+                                        button(class="btn btn-danger hvr-sweep-to-top" type="submit") save changes
+    //client portal

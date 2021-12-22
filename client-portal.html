@@ -14,7 +14,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
 </script>
 <![endif]-->
-    <title>Yassien | training</title>
+    <title>Yassien | client portal</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -188,59 +188,115 @@
       <nav class="main-breadcrumb" aria-label="breadcrumb" style="background-image:url('images/bgs/broad.jpg')">
         <div class="container">
           <div class="breadcrumb-title">
-            <h2>training</h2>
+            <h2>welcome, client name</h2>
           </div>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">training</li>
+              <li class="breadcrumb-item active" aria-current="page">client portal</li>
             </ol>
           </nav>
         </div>
       </nav>
       <!--breadcrumb-->
-      <!--training-->
-      <section class="training">
+      <!--client portal-->
+      <section class="client-portal">
         <div class="container">
           <div class="content">
-            <div class="training-box">
-              <div class="row">
-                <div class="col-lg-5 p-0">
-                  <div class="image"><img class="img-fluid" src="images/training/01.jpg" alt=""></div>
+            <div class="nav nav-pills" id="profile_portal_tabs" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active" id="client-portal-3-tab" data-bs-toggle="pill" data-bs-target="#client-portal-3" type="button" role="tab" aria-controls="client-portal-3" aria-selected="false">all cases</button>
+              <button class="nav-link" id="client-portal-1-tab" data-bs-toggle="pill" data-bs-target="#client-portal-1" type="button" role="tab" aria-controls="client-portal-1" aria-selected="false">upload file</button>
+            </div>
+            <form class="g-3" action="" novalidate>
+              <div class="tab-content" id="profile_tabsContent">
+                <div class="tab-pane fade show active" id="client-portal-3" role="tabpanel" aria-labelledby="client-portal-3-tab"> 
+                  <div class="table-area">
+                    <table class="table table-hover" id="client_dataTable">
+                      <thead>
+                        <tr>
+                          <th>open Date </th>
+                          <th>case</th>
+                          <th>type</th>
+                          <th>status </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Apr 1, 2019</td>
+                          <td> <a class="case-name" href="">
+                               An example alert with an icon</a></td>
+                          <td>case type</td>
+                          <td> <span class="badge rounded-pill bg-danger">closed</span></td>
+                        </tr>
+                        <tr>
+                          <td>Apr 1, 2018</td>
+                          <td> <a class="case-name" href="">
+                               An example alert with an icon</a></td>
+                          <td>case type</td>
+                          <td> <span class="badge rounded-pill bg-success">in progress</span></td>
+                        </tr>
+                        <tr>
+                          <td>Apr 1, 2017</td>
+                          <td> <a class="case-name" href="">
+                               An example alert with an icon</a></td>
+                          <td>case type</td>
+                          <td> <span class="badge rounded-pill bg-success">in progress</span></td>
+                        </tr>
+                        <tr>
+                          <td>Apr 1, 2018</td>
+                          <td> <a class="case-name" href="">
+                               An example alert with an icon</a></td>
+                          <td>case type</td>
+                          <td> <span class="badge rounded-pill bg-success">in progress</span></td>
+                        </tr>
+                        <tr>
+                          <td>Apr 1, 2018</td>
+                          <td> <a class="case-name" href="">
+                               An example alert with an icon</a></td>
+                          <td>case type</td>
+                          <td> <span class="badge rounded-pill bg-danger">closed</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div>
+                    <nav class="navigation" aria-label="Page navigation">
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link arr" href="#!" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                        <li class="page-item active"><a class="page-link" href="#!">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                        <li class="page-item"><a class="page-link arr" href="#!" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
-                <div class="col-lg-7 p-0">
-                  <div class="details">
-                    <div class="title">
-                      <h3>this is training title</h3>
+                <div class="tab-pane fade" id="client-portal-1" role="tabpanel" aria-labelledby="client-portal-1-tab"> 
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <h3 class="subtitle">upload file</h3>
+                      <div class="alert alert-warning alert-dismissible fade show" role="alert"><strong>Holy guacamole!</strong>You should check in on some of those fields below.
+                        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
                     </div>
-                    <div class="text">
-                      <p>Dr. Aly Yassien was graduated from faculty of Law  Cairo University at (1982-1983 ). Since then and after he has committed all his attitude to be more updated with the international laws and legal studies concerning important topics, so he sought to obtain post-graduate degrees as A Diploma of international commercial law “the mechanism of the WTO” (kings college – London University), Ph.D. at international arbitration commercial law ( Holborn college – London ), LLM degree in Maritime transport and logistics “Arab academy for science, technology, and maritime transport, a Predoctoral researcher in investment dispute settlement mechanism.</p><a class="btn" href="training-apply.html">submit now</a>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <input class="form-control" type="file">
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <button class="btn btn-danger hvr-sweep-to-top" type="submit">save changes</button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="training-box">
-              <div class="row">
-                <div class="col-lg-5 p-0">
-                  <div class="image"><img class="img-fluid" src="images/training/02.jpg" alt=""></div>
-                </div>
-                <div class="col-lg-7 p-0">
-                  <div class="details">
-                    <div class="title">
-                      <h3>this is Moot court</h3>
-                    </div>
-                    <div class="text">
-                      <p>Dr. Aly Yassien was graduated from faculty of Law  Cairo University at (1982-1983 ). Since then and after he has committed all his attitude to be more updated with the international laws and legal studies concerning important topics, so he sought to obtain post-graduate degrees as A Diploma of international commercial law “the mechanism of the WTO” (kings college – London University), Ph.D. at international arbitration commercial law ( Holborn college – London ), LLM degree in Maritime transport and logistics “Arab academy for science, technology, and maritime transport, a Predoctoral researcher in investment dispute settlement mechanism.</p><a class="btn" href="training-apply.html">submit now</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
-      <!--training-->
+      <!--client portal-->
       <!--to top-->
       <div id="toTop">
         <button> <i class="bi bi-chevron-double-up"></i></button>

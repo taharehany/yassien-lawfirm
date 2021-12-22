@@ -295,6 +295,10 @@
             }
         }
     }
+
+    .contact-wrapper-three {
+        padding: 40px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -307,12 +311,9 @@
     }
 
     .main-title {
-        text-align: center;
         display: block !important;
 
-        .top-title {
-            justify-content: center !important;
-        }
+        .top-title {}
 
         h2 {
             font-size: 20px;
@@ -333,6 +334,10 @@
                         height: 200px;
                     }
                 }
+
+                .details {
+                    padding: 15px 0;
+                }
             }
         }
     }
@@ -340,13 +345,15 @@
     section.careers {
         .content {
             .career-box {
-                    padding: 15px;
-                    @include borderRadius(20px);
+                padding: 15px;
+                @include borderRadius(20px);
+
                 .details {
                     .head-part {
                         .title h3 a {
                             font-size: 18px;
                         }
+
                         grid-template-columns: 60px auto;
                         gap: 10px;
 
@@ -382,6 +389,18 @@
                 h3+p {
                     font-size: 14px;
                 }
+            }
+        }
+    }
+
+    .contact-wrapper-three {
+        padding: 20px;
+    }
+
+    section.apply {
+        .content {
+            .form-area {
+                padding: 20px;
             }
         }
     }
@@ -424,6 +443,6 @@
     }
 
     .main-title h2 {
-        font-size: 20px;
+        font-size: 26px;
     }
 }

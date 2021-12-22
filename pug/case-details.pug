@@ -1,0 +1,75 @@
+extend index
+
+block website_title
+    title #{website_title} | case details
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 welcome, client name
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active" aria-current="page") case details
+    //breadcrumb
+
+    //case details
+    section(class="client-portal")
+        div(class="container")
+            div(class="content")
+                div(class="table-area")
+                    table(class="table table-hover")
+                        thead
+                            tr
+                                th open Date 
+                                th case
+                                th type
+                                th status 
+                        tbody
+                            tr
+                                td Apr 1, 2019
+                                    a(href="" class="case-name") 
+                                        | An example alert with an icon
+                                td 
+                                    a(href="" class="case-name") 
+                                        | An example alert with an icon
+                                td case type
+                                td 
+                                    span(class='badge rounded-pill bg-danger') closed
+                            tr
+                                td Apr 1, 2018
+                                td 
+                                    a(href="" class="case-name") 
+                                        | An example alert with an icon
+                                td case type
+                                td 
+                                    span(class='badge rounded-pill bg-success') in progress
+                            tr
+                                td Apr 1, 2017
+                                td 
+                                    a(href="" class="case-name") 
+                                        | An example alert with an icon
+                                td case type
+                                td 
+                                    span(class='badge rounded-pill bg-success') in progress
+                            tr
+                                td Apr 1, 2018
+                                td 
+                                    a(href="" class="case-name") 
+                                        | An example alert with an icon
+                                td case type
+                                td 
+                                    span(class='badge rounded-pill bg-success') in progress
+                            tr
+                                td Apr 1, 2018
+                                td 
+                                    a(href="" class="case-name") 
+                                        | An example alert with an icon
+                                td case type
+                                td 
+                                    span(class='badge rounded-pill bg-danger') closed
+                
+    //case details

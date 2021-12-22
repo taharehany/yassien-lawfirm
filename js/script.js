@@ -202,16 +202,6 @@ $(document).ready(function () {
 $(window).on("load", function () {
   $('.loader').delay(500).fadeOut(500);
 
-  //wow animate
-  wow = new WOW({
-    boxClass: 'wow', // default
-    animateClass: 'animated', // default
-    offset: 0, // default
-    mobile: false, // default
-    live: true // default
-  })
-  // wow.init();
-
   //counter up
   $(".counter").counterUp({
     delay: 10,
@@ -221,7 +211,7 @@ $(window).on("load", function () {
   });
 
   //file upload
-  $('input[type="file"]').each(function () {
+  $('.apply input[type="file"]').each(function () {
     // get label text
     var label = $(this).parents('.form-group').find('label').text();
     label = (label) ? label : 'Upload your resume';
@@ -252,5 +242,12 @@ $(window).on("load", function () {
   $(".select2").select2();
 
   // Default
-	$("#post_rating .ratyli").ratyli();
+  $("#post_rating .ratyli").ratyli();
+
+  //dataTable
+  $("#client_dataTable").DataTable({
+    "paging": false,
+    "bSort": true, 
+    "ordering": true
+  });
 });
