@@ -2575,14 +2575,14 @@ section.contact-in-page {
 }
 
 .contact-info-list .info-item .content p i {
-    margin-right: 10px;
+    margin-inline-end: 10px;
     color: #b68c5a;
 }
 
 .map-area .map-box iframe {
     display: inherit;
     width: 100%;
-    height: 590px;
+    height: 450px;
     border: none;
 }
 
@@ -2639,6 +2639,13 @@ section.client-portal {
 
             .form-group {
                 margin-bottom: 15px;
+                label {
+                    margin-bottom: 15px;
+                    text-transform: capitalize;
+                }
+                select {
+                    text-transform: capitalize;
+                }
 
                 .btn {
                     background-color: $main_color;
@@ -2650,7 +2657,7 @@ section.client-portal {
                 }
             }
 
-            .form-control {
+            .form-control, .form-select {
                 border: none;
                 @include transition(all ease 0.3s);
                 color: #333;
@@ -2705,13 +2712,19 @@ section.client-portal {
                 border-spacing: 0 10px;
                 min-width: 700px;
 
-                .case-name {
-                    display: flex;
+                .case-name, .case-files {
+                    display: inline-flex;
                     align-items: center;
                     color: $main_color;
 
                     &:hover {
                         color: $second_color
+                    }
+                    &:focus {
+                        color: $second_color;
+                    }
+                    i {
+                        font-size: 30px;
                     }
                 }
 

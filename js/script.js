@@ -28,6 +28,7 @@ $(document).ready(function () {
     items: 1,
     nav: false,
     dots: true,
+    rtl: true,
     smartSpeed: 1000,
     // animateOut: "slideOutUp",
     // animateIn: "slideInDown",
