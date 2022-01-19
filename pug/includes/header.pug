@@ -1,6 +1,6 @@
 //header
 header 
-    div(class="middle-part") 
+    //- div(class="middle-part") 
         div(class="container")
             div(class="middle-part-content") 
                 div(class="box")
@@ -29,7 +29,7 @@ header
                                 a(href="mailto:test@gmail.com") test@gmail.com
     //navbar desktop
     nav(class="navbar main-nav navbar-expand-lg")
-        div(class="container")
+        div(class="container-fluid")
             div(class="navbar-content")
                 div(class="group")
                     button(class="navbar-toggler", type="button", data-bs-toggle="offcanvas", data-bs-target="#side_menu", aria-controls="side_menu", aria-expanded="false", aria-label="Toggle navigation")
@@ -37,8 +37,9 @@ header
                             span
                             span
                             span
-                    div(class="login")
-                        button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#loginModal") login now
+                    a(class="navbar-brand", href="index.html") 
+                        img(data-src="images/logo.png", class="img-fluid" alt ="")
+                    
                 div(class="collapse navbar-collapse" id="navbarNav")
                     ul(class="navbar-nav")
                         li(class="nav-item active")
@@ -99,6 +100,8 @@ header
                                     a(class="dropdown-item", href="arabic/index.html") arabic
                                 li
                                     a(class="dropdown-item", href="") english
+                div(class="login")
+                    button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#loginModal") login now
     //navbar desktop
 
     //side menu in mobile only

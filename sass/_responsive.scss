@@ -15,12 +15,15 @@
 @media screen and (max-width: 991px) {
     header {
         .navbar {
-            top: 83px;
+            top: 0;
 
             .group {
                 padding: 12px;
                 width: 100%;
-                justify-content: space-between;
+                justify-content: start;
+.navbar-toggler {
+    margin-inline-end: 15px;
+}
             }
         }
 
@@ -145,7 +148,7 @@
 
     header {
         .navbar {
-            top: 73px;
+            top: 0;
         }
 
         .middle-part {

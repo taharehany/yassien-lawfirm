@@ -1,6 +1,6 @@
 //breadcrumb
 .main-breadcrumb {
-    padding: 10rem 0 7rem;
+    padding: 12rem 0 7rem;
     position: relative;
     z-index: 1;
     background-size: cover;
@@ -14,7 +14,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgb(172 169 169 / 30%);
+        background-color: rgb(0 0 0 / 10%);
         z-index: -1;
     }
 
@@ -313,6 +313,7 @@ section.about-in-page {
             float: left;
             max-width: 550px;
             margin-bottom: 25px;
+            margin-inline-end: 30px;
 
             img {
                 min-height: 440px;
@@ -329,6 +330,8 @@ section.about-in-page {
             &:nth-child(even) {
                 .about-image {
                     float: right;
+                    margin-inline-end: 0;
+                    margin-inline-start: 30px;
 
                     &::after {
                         right: 0;
@@ -403,35 +406,42 @@ section.expertise {
 
     .content {
         .exp-box {
-            background-color: $main_color;
-            padding: 45px 25px;
+            background-color: rgba(11, 25, 66, 0.9);
+            padding: 60px 25px;
             text-align: center;
             margin-bottom: 25px;
             @include transition(all ease 0.3s);
+            position: relative;
+            overflow: hidden;
 
             &:hover {
-                background-color: $second_color;
+                background-color: $main_color;
+                // background-color: rgba(192, 159, 31, 0.8);
 
                 .icon {
                     opacity: 0;
                 }
 
                 .title {
-                    @include transform(translateY(-70px))
+                    @include transform(translateY(-40px))
                 }
 
                 .more {
                     opacity: 1;
                 }
-            }
-
-            .icon {
-                margin-bottom: 25px;
-                @include transition(all ease 0.1s);
 
                 img {
-                    width: 70px;
+                    @include transform(scale(1.2));
                 }
+            }
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                @extend %fitimage;
+                z-index: -1;
+                @include transition(all ease 1s);
             }
 
             .title {
@@ -448,7 +458,7 @@ section.expertise {
             }
 
             .more {
-                margin-top: -50px;
+                margin-top: -20px;
                 opacity: 0;
                 @include transition(all ease 0.3s);
 
@@ -733,6 +743,7 @@ section.single-service {
 //search
 .search-part {
     margin: 65px 0;
+
     .content {
         padding: 30px;
         background: #f3f3f3;
@@ -1042,13 +1053,14 @@ section.knowledge {
 
         .content-txt {
             text-align: center;
+
             h3 {
                 color: #d4d8db;
                 margin-bottom: 30px;
                 font-size: 50px;
                 font-weight: 700;
             }
-    
+
             h4 {
                 color: $main_color;
                 margin-bottom: 10px;
@@ -1202,23 +1214,24 @@ section.team {
 
             .image {
                 overflow: hidden;
-                @include borderRadius(50%);
-                height: 220px;
-                width: 220px;
+                @include borderRadius(10px);
+                height: 300px;
+                // width: 220px;
                 margin: 0 auto 25px;
+                border: 2px solid #fff;
 
                 a {
                     cursor: pointer;
                 }
 
                 img {
-                    border: 2px solid #fff;
-                    @include borderRadius(50%);
+                    // border: 2px solid #fff;
+                    @include borderRadius(10px);
                     @extend %fitimage;
                     @include transition(all ease 0.4s);
 
                     &:hover {
-                        @include transform(scale(1.15))
+                        @include transform(scale(1.1))
                     }
                 }
             }
@@ -2632,6 +2645,12 @@ section.client-portal {
             }
         }
 
+        .all-cases {
+            padding: 25px;
+            @include borderRadius(0);
+            background-color: #fff;
+        }
+
         form {
             padding: 25px;
             @include borderRadius(0);
@@ -2639,10 +2658,12 @@ section.client-portal {
 
             .form-group {
                 margin-bottom: 15px;
+
                 label {
                     margin-bottom: 15px;
                     text-transform: capitalize;
                 }
+
                 select {
                     text-transform: capitalize;
                 }
@@ -2657,7 +2678,8 @@ section.client-portal {
                 }
             }
 
-            .form-control, .form-select {
+            .form-control,
+            .form-select {
                 border: none;
                 @include transition(all ease 0.3s);
                 color: #333;
@@ -2712,7 +2734,8 @@ section.client-portal {
                 border-spacing: 0 10px;
                 min-width: 700px;
 
-                .case-name, .case-files {
+                .case-name,
+                .case-files {
                     display: inline-flex;
                     align-items: center;
                     color: $main_color;
@@ -2720,9 +2743,11 @@ section.client-portal {
                     &:hover {
                         color: $second_color
                     }
+
                     &:focus {
                         color: $second_color;
                     }
+
                     i {
                         font-size: 30px;
                     }

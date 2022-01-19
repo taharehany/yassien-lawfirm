@@ -100,13 +100,15 @@ header {
 	.navbar {
 		padding: 0;
 		position: fixed;
-		top: 123px;
+		top: 0;
 		width: 100%;
 		@include transition(top linear 0.2s);
 
 		.navbar-content {
-			background-color: $second_color;
+			// background-color: $second_color;
+			background-color: transparent;
 			display: flex;
+			align-items: center;
 			width: 100%;
 		}
 
@@ -227,7 +229,7 @@ header {
 		}
 
 		.navbar-collapse {
-			// justify-content: center;
+			justify-content: center;
 		}
 
 		.dropdown-toggle {
@@ -253,12 +255,6 @@ header {
 			&::after {
 				display: none;
 			}
-		}
-
-		.group {
-			display: flex;
-			order: 1;
-			align-items: center;
 		}
 
 		.lang {
@@ -288,7 +284,7 @@ header {
 				padding: 0;
 
 				a {
-					font-size: 14px;
+					font-size: 15x;
 					display: block;
 					font-weight: 600;
 					text-decoration: none;
@@ -440,28 +436,30 @@ header {
 	}
 
 	.group {
-		padding-inline-end: 15px;
+		// padding-inline-end: 15px;
+		display: flex;
+			align-items: center;
+	}
+	.login {
+		.btn {
+			position: relative;
+			color: #fff;
+			font-size: 16px;
+			padding: 5px 15px;
+			font-weight: 500;
+			border-radius: 0px;
+			border: none;
+			border-inline-end: 3px solid $main_color;
+			// background-color: #fff;
+			text-transform: capitalize;
+			white-space: nowrap;
 
-		.login {
-			.btn {
-				position: relative;
+			&:focus,
+			&:active,
+			&:hover {
+				box-shadow: none;
+				background-color: $main_color;
 				color: #fff;
-				font-size: 16px;
-				padding: 5px 15px;
-				font-weight: 500;
-				border-radius: 0px;
-				border: none;
-				border-inline-end: 3px solid $main_color;
-				// background-color: #fff;
-				text-transform: capitalize;
-
-				&:focus,
-				&:active,
-				&:hover {
-					box-shadow: none;
-					background-color: $main_color;
-					color: #fff;
-				}
 			}
 		}
 	}
@@ -587,7 +585,7 @@ header {
 section.main-slider {
 	background-color: #f9f9f9;
 	// margin-top: -75px;
-	height: 45rem;
+	height: 50rem;
 
 	.owl-item {
 		&.active {
@@ -792,7 +790,7 @@ section.about {
 			width: calc(100%);
 			position: relative;
 			z-index: 1;
-			padding: 40px;
+			// padding: 40px;
 			@include transition(all ease 0.3s);
 
 			&::after {
@@ -805,6 +803,7 @@ section.about {
 				border: 20px $main_color solid;
 				min-width: calc(100% - 70px);
 				z-index: -1;
+				display: none
 			}
 
 			img {
@@ -873,17 +872,18 @@ section.about {
 
 // counter numbers
 section.counter-numbers {
-	padding: $padding_section;
+	padding: 120px 0;
 	background: url(../images/bgs/counter-bg.jpg);
 	background-position: center;
 	background-size: cover;
 	z-index: 1;
 	position: relative;
+	background-attachment: fixed;
 
 	&::after {
 		content: "";
 		position: absolute;
-		background-color: rgba(11, 25, 66, 0.8);
+		background-color: rgba(11, 25, 66, 0.5);
 		top: 0;
 		left: 0;
 		z-index: -1;
@@ -1508,7 +1508,7 @@ section.clients {
 			}
 
 			img {
-				opacity: 0.5;
+				// opacity: 0.5;
 				-webkit-filter: grayscale(100%);
 				filter: grayscale(100%);
 				@include transition(all ease 0.3s);
@@ -1872,7 +1872,7 @@ footer {
 					font-size: 14px;
 					line-height: 1.7em;
 					@extend %max_lines;
-					-webkit-line-clamp: 5;
+					-webkit-line-clamp: 6;
 				}
 
 				.footer-logo {
@@ -2022,6 +2022,7 @@ footer {
 				padding: 0 15px;
 				height: 50px;
 				@include borderRadius(0);
+				max-width: 350px;
 
 				&::placeholder {
 					color: #eee;
