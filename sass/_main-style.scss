@@ -872,7 +872,7 @@ section.about {
 
 // counter numbers
 section.counter-numbers {
-	padding: 120px 0;
+	padding: 200px 0;
 	background: url(../images/bgs/counter-bg.jpg);
 	background-position: center;
 	background-size: cover;
@@ -883,7 +883,7 @@ section.counter-numbers {
 	&::after {
 		content: "";
 		position: absolute;
-		background-color: rgba(11, 25, 66, 0.5);
+		background-color: rgba(11, 25, 66, 0.1);
 		top: 0;
 		left: 0;
 		z-index: -1;
