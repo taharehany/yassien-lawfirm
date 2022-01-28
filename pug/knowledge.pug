@@ -22,15 +22,13 @@ block home_block
             div(class="content")
                 ul(class="nav nav-pills", role="tablist")
                     li(class="nav-item", role="presentation")
-                        button(class="nav-link active", id="knowledge-1-tab" data-bs-toggle="pill", data-bs-target="#knowledge-1", type="button", role="tab", aria-controls="knowledge-1", aria-selected="true") news
+                        button(class="nav-link active", id="knowledge-1-tab" data-bs-toggle="pill", data-bs-target="#knowledge-1", type="button", role="tab", aria-controls="knowledge-1", aria-selected="true") news & insights
                     li(class="nav-item", role="presentation")
-                        button(class="nav-link", id="knowledge-2-tab" data-bs-toggle="pill", data-bs-target="#knowledge-2", type="button", role="tab", aria-controls="knowledge-2", aria-selected="false") Insights
+                        button(class="nav-link", id="knowledge-2-tab" data-bs-toggle="pill", data-bs-target="#knowledge-2", type="button", role="tab", aria-controls="knowledge-2", aria-selected="false") Lex update
                     li(class="nav-item", role="presentation")
-                        button(class="nav-link", id="knowledge-3-tab" data-bs-toggle="pill", data-bs-target="#knowledge-3", type="button", role="tab", aria-controls="knowledge-3", aria-selected="false") Lex update
+                        button(class="nav-link", id="knowledge-3-tab" data-bs-toggle="pill", data-bs-target="#knowledge-3", type="button", role="tab", aria-controls="knowledge-3", aria-selected="false") Podcast
                     li(class="nav-item", role="presentation")
-                        button(class="nav-link", id="knowledge-4-tab" data-bs-toggle="pill", data-bs-target="#knowledge-4", type="button", role="tab", aria-controls="knowledge-4", aria-selected="false") Podcast
-                    li(class="nav-item", role="presentation")
-                        button(class="nav-link", id="knowledge-5-tab" data-bs-toggle="pill", data-bs-target="#knowledge-5", type="button", role="tab", aria-controls="knowledge-5", aria-selected="false") Media gallery
+                        button(class="nav-link", id="knowledge-4-tab" data-bs-toggle="pill", data-bs-target="#knowledge-4", type="button", role="tab", aria-controls="knowledge-4", aria-selected="false") Media gallery
                 //search
                 div(class="search-part")
                     div(class="content")
@@ -69,7 +67,7 @@ block home_block
                                             | search
                                             i(class="bi bi-search")
                 div(class="tab-content")
-                    div(class="tab-pane fade show active", id="knowledge-1" role="tabpanel", aria-labelledby="knowledge-1-tab") 
+                    //- div(class="tab-pane fade show active", id="knowledge-1" role="tabpanel", aria-labelledby="knowledge-1-tab") 
                         //news
                         section(class="news")
                             div(class="content")
@@ -155,7 +153,7 @@ block home_block
                                                     a(href="single-blog.html") read more
                                                         i(class="bi bi-arrow-right")
                         //news
-                    div(class="tab-pane fade", id="knowledge-2" role="tabpanel", aria-labelledby="knowledge-2-tab") 
+                    div(class="tab-pane fade show active", id="knowledge-1" role="tabpanel", aria-labelledby="knowledge-1-tab") 
                         //blogs
                         section(class="blogs")
                             div(class="content")
@@ -230,7 +228,7 @@ block home_block
                                                         a(href="#" class="bi bi-instagram")
                                                         a(href="#" class="bi bi-linkedin")
                         //blogs
-                    div(class="tab-pane fade", id="knowledge-3" role="tabpanel", aria-labelledby="knowledge-3-tab") 
+                    div(class="tab-pane fade", id="knowledge-2" role="tabpanel", aria-labelledby="knowledge-2-tab") 
                         //lex update
                         section(class="lex-update")
                             div(class="content")
@@ -239,8 +237,8 @@ block home_block
                                         div(class="lex-update-box")
                                             div(class="image")
                                                 img(class="img-fluid" data-src="images/blogs/01.jpg" alt="")
-                                                a(href="single-lex-update.html" class="layer") 
-                                                    i(class="bi bi-link")
+                                                a(href="files/file.pdf" download="download" class="layer") 
+                                                    i(class="bi bi-file-earmark-pdf")
                                             div(class="details")
                                                 h3(class="title")
                                                     a(href="single-lex-update.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
@@ -263,7 +261,7 @@ block home_block
                                             div(class="image")
                                                 img(class="img-fluid" data-src="images/blogs/02.jpg" alt="")
                                                 a(href="single-lex-update.html" class="layer") 
-                                                    i(class="bi bi-link")
+                                                    i(class="bi bi-file-earmark-pdf")
                                             div(class="details")
                                                 h3(class="title")
                                                     a(href="single-lex-update.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
@@ -286,7 +284,7 @@ block home_block
                                             div(class="image")
                                                 img(class="img-fluid" data-src="images/blogs/03.jpg" alt="")
                                                 a(href="single-lex-update.html" class="layer") 
-                                                    i(class="bi bi-link")
+                                                    i(class="bi bi-file-earmark-pdf")
                                             div(class="details")
                                                 h3(class="title")
                                                     a(href="single-lex-update.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
@@ -305,7 +303,7 @@ block home_block
                                                         a(href="#" class="bi bi-instagram")
                                                         a(href="#" class="bi bi-linkedin")
                         //lex update
-                    div(class="tab-pane fade", id="knowledge-4" role="tabpanel", aria-labelledby="knowledge-4-tab")
+                    div(class="tab-pane fade", id="knowledge-3" role="tabpanel", aria-labelledby="knowledge-3-tab")
                         section(class="podcast")
                             div(class="container")
                                 div(class="content")
@@ -406,7 +404,7 @@ block home_block
                                                 audio(controls, width="100%")
                                                     source(src="https://hwcdn.libsyn.com/p/5/1/8/518b62b2d896549d/Syntax152.mp3?c_id=44542285&cs_id=44542285&expiration=1561491578&hwt=40b42995123424c9086441d814f8a1ba")
                                                     | Your browser does not support the audio tag.
-                    div(class="tab-pane fade", id="knowledge-5" role="tabpanel", aria-labelledby="knowledge-5-tab")
+                    div(class="tab-pane fade", id="knowledge-4" role="tabpanel", aria-labelledby="knowledge-4-tab")
                         //gallery
                         section(class="gallery")
                             div(class="content")

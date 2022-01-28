@@ -32,14 +32,13 @@ header
         div(class="container-fluid")
             div(class="navbar-content")
                 div(class="group")
+                    a(class="navbar-brand", href="index.html") 
+                        img(src="images/logo.svg", class="img-fluid" alt ="")
                     button(class="navbar-toggler", type="button", data-bs-toggle="offcanvas", data-bs-target="#side_menu", aria-controls="side_menu", aria-expanded="false", aria-label="Toggle navigation")
                         div(class="hamburger-menu")
                             span
                             span
                             span
-                    a(class="navbar-brand", href="index.html") 
-                        img(data-src="images/logo.png", class="img-fluid" alt ="")
-                    
                 div(class="collapse navbar-collapse" id="navbarNav")
                     ul(class="navbar-nav")
                         li(class="nav-item active")
@@ -92,7 +91,7 @@ header
                                     a(class="dropdown-item", href="client-portal.html") client portal
                                 li
                                     a(class="dropdown-item", href="case-details.html") case details
-                        li(class="nav-item dropdown")
+                        //- li(class="nav-item dropdown")
                             a(class="nav-link dropdown-toggle", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
                                 | language
                             ul(class="dropdown-menu")
@@ -162,14 +161,8 @@ header
                                     a(class="dropdown-item", href="client-portal.html") client portal
                                 li
                                     a(class="dropdown-item", href="case-details.html") case details
-                        li(class="nav-item dropdown")
-                            a(class="nav-link dropdown-toggle", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
-                                | language
-                            ul(class="dropdown-menu")
-                                li
-                                    a(class="dropdown-item", href="arabic/index.html") arabic
-                                li
-                                    a(class="dropdown-item", href="") english
+                div(class="login-side")
+                    button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#loginModal") login now
 //header
 
 //login modal

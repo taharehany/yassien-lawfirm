@@ -21,16 +21,21 @@
     <div class="main-wrapper">
       <!--PreLoader-->
       <!--PreLoader-->
+      <!--social links-->
+      <div class="fixed-social-links">
+        <div class="links"><a class="facebook bi bi-facebook" href="#"></a><a class="twitter bi bi-twitter" href="#"></a><a class="instagram bi bi-instagram" href="#"></a><a class="linkedin bi bi-linkedin" href="#"></a></div>
+      </div>
+      <!--social links-->
       <!--header-->
       <header> 
         <!--navbar desktop-->
         <nav class="navbar main-nav navbar-expand-lg">
           <div class="container-fluid">
             <div class="navbar-content">
-              <div class="group">
+              <div class="group"><a class="navbar-brand" href="index.html"> <img class="img-fluid" src="images/logo.svg" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-expanded="false" aria-label="Toggle navigation">
                   <div class="hamburger-menu"><span></span><span></span><span></span></div>
-                </button><a class="navbar-brand" href="index.html"> <img class="img-fluid" data-src="images/logo.png" alt=""></a>
+                </button>
               </div>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -59,12 +64,6 @@
                       <li><a class="dropdown-item" href="404.html">404</a></li>
                       <li><a class="dropdown-item" href="client-portal.html">client portal</a></li>
                       <li><a class="dropdown-item" href="case-details.html">case details</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">language</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="arabic/index.html">arabic</a></li>
-                      <li><a class="dropdown-item" href="">english</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -112,13 +111,10 @@
                       <li><a class="dropdown-item" href="case-details.html">case details</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">language</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="arabic/index.html">arabic</a></li>
-                      <li><a class="dropdown-item" href="">english</a></li>
-                    </ul>
-                  </li>
                 </ul>
+              </div>
+              <div class="login-side">
+                <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">login now</button>
               </div>
             </div>
           </div>
@@ -199,20 +195,20 @@
                     <table class="table table-hover">
                       <thead>
                         <tr>
-                          <th>subject</th>
+                          <th>subject name</th>
+                          <th>type</th>
                           <th>brief</th>
                           <th>case files</th>
                           <th>status</th>
-                          <th>other</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
                           <td>An example alert with an icon</td>
-                          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea illo facere, illum possimus, vero velit officia molestiae blanditiis quo vel eaque id adipisci harum, dolor ipsum deserunt sed aut cum?</td>
+                          <td nowrap="nowrap">text here</td>
+                          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea illo facere, illum possimus, vero velit officia molestiae blanditiis quo vel eaque id adipisci harum, dolor ipsum deserunt sed aut cum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea illo facere, illum possimus, vero velit officia molestiae blanditiis quo vel eaque id adipisci harum, dolor ipsum deserunt sed aut cum? Lorem ipsum dolor sit amet</td>
                           <td><a class="case-files" href=""> <i class="bi bi-file-pdf"></i></a><a class="case-files" href=""> <i class="bi bi-file-pdf"></i></a></td>
-                          <td>----</td>
-                          <td>----</td>
+                          <td nowrap="nowrap">text here</td>
                         </tr>
                       </tbody>
                     </table>
@@ -261,7 +257,7 @@
       <!--to top-->
       <!--footer part-->
       <footer>
-        <div class="container">
+        <div class="container-fluid">
           <div class="footer-content">
             <div class="row">
               <div class="col-lg-4">
@@ -269,15 +265,16 @@
                   <div class="text"><a class="footer-logo" href="index.html"> <img class="img-fluid mb-2" data-src="images/logo.png" alt=""></a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium!</p>
                   </div>
+                  <div class="working-hours">
+                    <ul>
+                      <li>Sunday – Thursday:<span>9:00 AM : 5:00 PM</span></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div class="col-lg-5">
                 <div class="footer-box">
                   <h3>useful links</h3>
-                  <ul class="map-links">
-                    <li><a href="terms.html">terms & policy </a></li>
-                    <li><a href="knowledge.html">our knowledge</a></li>
-                  </ul>
                   <div class="send-us">
                     <form action="" method="">
                       <div class="input-group">
@@ -286,6 +283,12 @@
                       </div>
                     </form>
                   </div>
+                  <ul class="map-links">
+                    <li><a href="knowledge.html">news & insights</a></li>
+                    <li><a href="team.html">the team</a></li>
+                    <li><a href="careers.html">careers</a></li>
+                    <li><a href="terms.html">legal</a></li>
+                  </ul>
                 </div>
               </div>
               <div class="col-lg-3">
@@ -294,6 +297,7 @@
                   <div class="contact">
                     <p> <i class="bi bi-pin-map"></i>cairo, egypt</p>
                     <p> <i class="bi bi-telephone"></i><a href="tel:01112121212">01112121212</a></p>
+                    <p> <i class="bi bi-whatsapp"></i><a href="https://api.whatsapp.com/send?l=ar&amp;phone=201112121212&amp;text=&amp;source=&amp;data=" target="_blank">01112121212</a></p>
                     <p> <i class="bi bi-envelope"></i><a href="mailto:support@example.com">support@example.com</a></p>
                   </div>
                   <div class="social-links">

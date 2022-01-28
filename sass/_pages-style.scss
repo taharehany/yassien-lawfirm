@@ -406,8 +406,12 @@ section.expertise {
 
     .content {
         .exp-box {
-            background-color: rgba(11, 25, 66, 0.9);
+            // background-color: rgba(11, 25, 66, 0.9);
             padding: 60px 25px;
+            height: 270px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             text-align: center;
             margin-bottom: 25px;
             @include transition(all ease 0.3s);
@@ -415,15 +419,16 @@ section.expertise {
             overflow: hidden;
 
             &:hover {
-                background-color: $main_color;
-                // background-color: rgba(192, 159, 31, 0.8);
+                // background-color: $main_color;
+                background-color: rgba(11, 25, 66, 0.5);
 
                 .icon {
                     opacity: 0;
                 }
 
                 .title {
-                    @include transform(translateY(-40px))
+                    @include transform(translateY(-20px));
+                    opacity: 1;
                 }
 
                 .more {
@@ -431,7 +436,7 @@ section.expertise {
                 }
 
                 img {
-                    @include transform(scale(1.2));
+                    @include transform(scale(1.25));
                 }
             }
 
@@ -441,13 +446,14 @@ section.expertise {
                 top: 0;
                 @extend %fitimage;
                 z-index: -1;
-                @include transition(all ease 1s);
+                @include transition(all ease 2s);
             }
 
             .title {
                 @extend %max_lines;
                 -webkit-line-clamp: 2;
                 @include transition(all ease 0.3s);
+                opacity: 0;
 
                 h3 {
                     color: #fff;
@@ -458,7 +464,7 @@ section.expertise {
             }
 
             .more {
-                margin-top: -20px;
+                margin-top: 0;
                 opacity: 0;
                 @include transition(all ease 0.3s);
 
@@ -665,7 +671,7 @@ section.single-service {
                 @include transform(rotate(50deg) translateX(5px))
             }
         }
-
+       
         img {
             @extend %fitimage;
             height: 300px;
@@ -979,6 +985,13 @@ section.knowledge {
 
             .lex-update-box {
                 @extend .knowledge-box;
+                .image {
+                    i {
+                        @include transform(none !important);
+                        margin-top: 15px;
+                        margin-inline-start: 10px;
+                    }
+                }
             }
         }
 
@@ -2807,7 +2820,7 @@ section.client-portal {
                         td {
                             font-size: 16px;
                             color: #808080;
-                            vertical-align: middle;
+                            vertical-align: top;
                             padding: 10px 20px;
                             border: none;
 

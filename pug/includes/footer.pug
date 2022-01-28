@@ -6,7 +6,7 @@ div(id="toTop")
 
 //footer part
 footer
-	div(class="container")
+	div(class="container-fluid")
 		div(class="footer-content")
 			div(class="row")
 				div(class="col-lg-4")
@@ -15,19 +15,27 @@ footer
 							a(href="index.html" class="footer-logo") 
 								img(data-src="images/logo.png" class="img-fluid mb-2" alt="")
 							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium!
+						div(class="working-hours")
+							ul
+								li Sunday – Thursday:
+									span 9:00 AM : 5:00 PM
 				div(class="col-lg-5")
 					div(class="footer-box")
 						h3 useful links
-						ul(class="map-links")
-							li
-								a(href="terms.html") terms & policy 
-							li
-								a(href="knowledge.html") our knowledge
 						div(class="send-us")
 							form(action="" method="")
 								div(class="input-group")
 									input(class="form-control" type="text" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="subscribeBtn")
 									button(class="btn btn-outline-secondary" id="subscribeBtn" type="button") Subscribe
+						ul(class="map-links")
+							li
+								a(href="knowledge.html") news & insights
+							li
+								a(href="team.html") the team
+							li
+								a(href="careers.html") careers
+							li
+								a(href="terms.html") legal
 				div(class="col-lg-3")
 					div(class="footer-box")
 						h3 contact info
@@ -39,10 +47,12 @@ footer
 								i(class="bi bi-telephone")
 								a(href="tel:01112121212") 01112121212
 							p 
+								i(class="bi bi-whatsapp")
+								a(href="https://api.whatsapp.com/send?l=ar&phone=201112121212&text=&source=&data=" target="_blank") 01112121212
+							p 
 								i(class="bi bi-envelope")
 								a(href="mailto:support@example.com") support@example.com
 						div(class="social-links")
-							//- h4 Follow Us
 							div(class="links")
 								a(href="#" class="bi bi-facebook")
 								a(href="#" class="bi bi-twitter")
