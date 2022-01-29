@@ -186,36 +186,50 @@
           <div class="row align-items-center">
             <div class="col-lg-6">
               <div class="contact-info-list mb-50">
-                <div class="info-item wow fadeInDown" wow-data-delay=".5s" style="visibility: visible; animation-name: fadeInDown;">
-                  <div class="thumb"><img src="images/contact/info-1.jpg" alt="Info Thumb"></div>
-                  <div class="content">
-                    <h3>Cairo<span class="sm-title">(Main)</span></h3>
-                    <p><i class="bi bi-telephone"></i><a href="tel:+01234556998">+012 (345) 56 998</a></p>
-                    <p><i class="bi bi-envelope"></i><a href="mailto:support@gmail.com">support@gmail.com</a></p>
-                    <p><i class="bi bi-newspaper"></i>fax: 02215420</p>
-                    <p><i class="bi bi-map"></i>59 Main Street, Cairo</p>
-                  </div>
-                </div>
-                <div class="info-item wow fadeInDown" wow-data-delay=".7s" style="visibility: visible; animation-name: fadeInDown;">
-                  <div class="thumb"><img src="images/contact/info-2.jpg" alt="Info Thumb"></div>
-                  <div class="content">
-                    <h3>Mohandseen <span class="sm-title">(Main)</span></h3>
-                    <p><i class="bi bi-telephone"></i><a href="tel:+01234556998">+012 (345) 56 998</a></p>
-                    <p><i class="bi bi-envelope"></i><a href="mailto:support@gmail.com">support@gmail.com</a></p>
-                    <p><i class="bi bi-newspaper"></i>fax: 02215420</p>
-                    <p><i class="bi bi-map"></i>59 Main Street, USACairo</p>
-                  </div>
-                </div>
-                <div class="info-item wow fadeInDown" wow-data-delay=".8s" style="visibility: visible; animation-name: fadeInDown;">
-                  <div class="thumb"><img src="images/contact/info-3.jpg" alt="Info Thumb"></div>
-                  <div class="content">
-                    <h3>Alexanderia <span class="sm-title">(Main)</span></h3>
-                    <p><i class="bi bi-telephone"></i><a href="tel:+01234556998">+012 (345) 56 998</a></p>
-                    <p><i class="bi bi-envelope"></i><a href="mailto:support@gmail.com">support@gmail.com</a></p>
-                    <p><i class="bi bi-newspaper"></i>fax: 02215420</p>
-                    <p><i class="bi bi-map"></i>59 Main Street, Alexanderia</p>
-                  </div>
-                </div>
+                <ul class="nav nav-pills" id="pills-tab">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="map-1-tab" data-bs-toggle="pill" data-bs-target="#map-1" type="button" role="tab" aria-controls="map-1" aria-selected="true"> 
+                      <div class="info-item wow fadeInDown">
+                        <div class="thumb"><a href="#map-1"> <img src="images/contact/info-1.jpg" alt="Info Thumb"></a></div>
+                        <div class="content">
+                          <h3>Cairo<span class="sm-title">(Main)</span></h3>
+                          <p><i class="bi bi-telephone"></i><a href="tel:+01234556998">+012 (345) 56 998</a></p>
+                          <p><i class="bi bi-envelope"></i><a href="mailto:support@gmail.com">support@gmail.com</a></p>
+                          <p><i class="bi bi-newspaper"></i>fax: 02215420</p>
+                          <p><i class="bi bi-map"></i>59 Main Street, Cairo</p>
+                        </div>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="map-2-tab" data-bs-toggle="pill" data-bs-target="#map-2" type="button" role="tab" aria-controls="map-2" aria-selected="false"> 
+                      <div class="info-item wow fadeInDown">
+                        <div class="thumb"><a href="#map-2"><img src="images/contact/info-2.jpg" alt="Info Thumb"></a></div>
+                        <div class="content">
+                          <h3>Mohandseen <span class="sm-title">(Main)</span></h3>
+                          <p><i class="bi bi-telephone"></i><a href="tel:+01234556998">+012 (345) 56 998</a></p>
+                          <p><i class="bi bi-envelope"></i><a href="mailto:support@gmail.com">support@gmail.com</a></p>
+                          <p><i class="bi bi-newspaper"></i>fax: 02215420</p>
+                          <p><i class="bi bi-map"></i>59 Main Street, USACairo</p>
+                        </div>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation"> 
+                    <button class="nav-link" id="map-3-tab" data-bs-toggle="pill" data-bs-target="#map-3" type="button" role="tab" aria-controls="map-3" aria-selected="false">
+                      <div class="info-item wow fadeInDown">
+                        <div class="thumb"><a href="#map-3"><img src="images/contact/info-3.jpg" alt="Info Thumb"></a></div>
+                        <div class="content">
+                          <h3>Alexanderia <span class="sm-title">(Main)</span></h3>
+                          <p><i class="bi bi-telephone"></i><a href="tel:+01234556998">+012 (345) 56 998</a></p>
+                          <p><i class="bi bi-envelope"></i><a href="mailto:support@gmail.com">support@gmail.com</a></p>
+                          <p><i class="bi bi-newspaper"></i>fax: 02215420</p>
+                          <p><i class="bi bi-map"></i>59 Main Street, Alexanderia</p>
+                        </div>
+                      </div>
+                    </button>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="col-lg-6">
@@ -264,18 +278,18 @@
       <!--map-->
       <section class="map-area">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-4">
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="map-1" role="tabpanel" aria-labelledby="map-1-tab">
               <div class="map-box fadeInUp">
                 <iframe src="https://maps.google.com/maps?q=67%20Shehab%20Street%20%2C%20El%20Mohandseen%2CGiza%20%2C%20Egypt&amp;t=m&amp;z=18&amp;output=embed&amp;iwloc=near"></iframe>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="tab-pane fade" id="map-2" role="tabpanel" aria-labelledby="map-2-tab">
               <div class="map-box fadeInUp">
                 <iframe src="https://maps.google.com/maps?q=67%20Shehab%20Street%20%2C%20El%20Mohandseen%2CGiza%20%2C%20Egypt&amp;t=m&amp;z=18&amp;output=embed&amp;iwloc=near"></iframe>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="tab-pane fade" id="map-3" role="tabpanel" aria-labelledby="map-3-tab">
               <div class="map-box fadeInUp">
                 <iframe src="https://maps.google.com/maps?q=67%20Shehab%20Street%20%2C%20El%20Mohandseen%2CGiza%20%2C%20Egypt&amp;t=m&amp;z=18&amp;output=embed&amp;iwloc=near"></iframe>
               </div>
@@ -308,7 +322,7 @@
               </div>
               <div class="col-lg-5">
                 <div class="footer-box">
-                  <h3>useful links</h3>
+                  <h4 class="title">useful links</h4>
                   <div class="send-us">
                     <form action="" method="">
                       <div class="input-group">
@@ -327,7 +341,7 @@
               </div>
               <div class="col-lg-3">
                 <div class="footer-box">
-                  <h3>contact info</h3>
+                  <h4 class="title">contact</h4>
                   <div class="contact">
                     <p> <i class="bi bi-pin-map"></i>cairo, egypt</p>
                     <p> <i class="bi bi-telephone"></i><a href="tel:01112121212">01112121212</a></p>
