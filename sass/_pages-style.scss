@@ -198,9 +198,9 @@
     }
 
     .person {
-        padding: 25px;
-        background-image: url(http://demo.ovathemes.com/athens/wp-content/uploads/2021/12/bg-attorney-single-bio.png);
-        background-color: rgb(36 94 172 / 90%);
+        padding: 15px;
+        // background-image: url(http://demo.ovathemes.com/athens/wp-content/uploads/2021/12/bg-attorney-single-bio.png);
+        background-color: #213a84;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -208,7 +208,7 @@
         margin-bottom: 25px;
 
         .image {
-            @include borderRadius(7px);
+            @include borderRadius(5px);
             overflow: hidden;
             margin-bottom: 15px;
             // width: 250px;
@@ -250,13 +250,17 @@
             background: $main_color;
             color: #fff;
             display: inline-block;
-            padding: 10px 25px;
+            padding: 8px 20px;
             border: 0;
             text-transform: capitalize;
             z-index: 1;
             position: relative;
             font-size: 16px;
-            @include borderRadius(10px);
+            @include borderRadius(7px);
+
+            i {
+                margin-inline-start: 5px;
+            }
         }
     }
 
@@ -358,6 +362,7 @@ section.about-in-page {
             max-width: 550px;
             margin-bottom: 25px;
             margin-inline-end: 30px;
+            // margin-inline-start: 30px;
 
             img {
                 min-height: 440px;
@@ -375,12 +380,12 @@ section.about-in-page {
                 .about-image {
                     float: right;
                     margin-inline-end: 0;
-                    margin-inline-start: 30px;
+                    margin-inline-start: 60px;
 
-                    &::after {
-                        right: 0;
-                        left: auto;
-                    }
+                    // &::after {
+                    //     right: 0;
+                    //     left: auto;
+                    // }
                 }
             }
         }
@@ -450,13 +455,12 @@ section.expertise {
 
     .content {
         .exp-box {
-            // background-color: rgba(11, 25, 66, 0.9);
-            padding: 60px 25px;
-            height: 270px;
+            background-color: rgba(11, 25, 66, 0.5);
+            padding: 25px 25px;
+            height: 300px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            text-align: center;
+            justify-content: space-between;
             margin-bottom: 25px;
             @include transition(all ease 0.3s);
             position: relative;
@@ -471,7 +475,7 @@ section.expertise {
                 }
 
                 .title {
-                    @include transform(translateY(-20px));
+                    @include transform(translateY(-10px));
                     opacity: 1;
                 }
 
@@ -497,11 +501,11 @@ section.expertise {
                 @extend %max_lines;
                 -webkit-line-clamp: 2;
                 @include transition(all ease 0.3s);
-                opacity: 0;
+                // opacity: 0;
 
                 h3 {
                     color: #fff;
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: 600;
                     line-height: 1.6;
                 }
@@ -509,17 +513,21 @@ section.expertise {
 
             .more {
                 margin-top: 0;
-                opacity: 0;
+                // opacity: 0;
                 @include transition(all ease 0.3s);
+                margin-inline-end: 0;
+                margin-block-start: auto;
 
                 .btn {
                     background-color: #fff;
-                    @include borderRadius(50%);
+                    @include borderRadius(0);
                     width: 35px;
                     height: 35px;
-                    margin: auto;
+                    // margin: auto;
                     @extend %center;
                     color: #000;
+                    margin-right: 0;
+                    margin-left: auto;
                 }
             }
         }
@@ -796,7 +804,7 @@ section.single-service {
 
     .content {
         padding: 30px;
-        background: #f3f3f3;
+        background: $second_color;
         // border: 1px solid #e3e3e3;
         position: relative;
         z-index: 1;
@@ -832,8 +840,9 @@ section.single-service {
             .btn {
                 background-color: $main_color;
                 color: #fff;
-                padding: 8px 25px;
+                padding: 7.5px 25px;
                 @include borderRadius(0);
+                width: 100%;
 
                 i {
                     margin-inline-end: 5px;
@@ -1304,9 +1313,9 @@ section.team {
                 img {
                     @extend %fitimage;
                     background-color: #dae4ed;
-                    width: 250px;
-                    height: 250px;
-                    @include borderRadius(50%)
+                    width: 100%;
+                    height: 100%;
+                    // @include borderRadius(50%)
                 }
             }
 
@@ -1354,12 +1363,17 @@ section.team {
                     .btn {
                         background-color: $main_color;
                         @include borderRadius(0);
-                        padding: 20px 45px;
+                        padding: 10px 20px;
                         color: #fff;
                         // margin-bottom: -25px;
                         // margin-left: -25px;
                         font-style: 16px;
                         text-transform: capitalize;
+                        @include transition(all ease .3s);
+
+                        &:hover {
+                            background-color: $second_color;
+                        }
                     }
                 }
             }
@@ -1385,7 +1399,7 @@ section.team {
                     // border: 2px solid #fff;
                     // @include borderRadius(10px);
                     @extend %fitimage;
-                    @include transition(all ease 0.4s);
+                    @include transition(all ease 0.5s);
 
                     &:hover {
                         @include transform(scale(1.1))
@@ -1493,6 +1507,7 @@ section.team {
                     p {
                         margin-bottom: 20px;
                     }
+
                     ul {
                         li {
                             a {
@@ -1670,8 +1685,77 @@ section.team {
     }
 }
 
-
 //team
+
+//team home
+section.team-home {
+    @extend .team;
+    background-color: rgba(21, 92, 180, .05);
+    background-image: url(../images/bgs/pattern-2.png);
+    background-size: cover;
+    // position: relative;
+    // z-index: 1;
+
+    // &::after {
+    //     position: absolute;
+    //     content: "";
+    //     left: 0;
+    //     top: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(0, 0, 0, .5);
+    //     z-index: -1;
+    // }
+
+    .content {
+        .team-box {
+            margin-bottom: 0;
+
+            &:hover {
+                .social {
+                    opacity: 1;
+                    @include transform(translateY(-60px))
+                }
+            }
+
+            .image {
+                height: 350px;
+                @include borderRadius(5px);
+            }
+
+            .social {
+                opacity: 0;
+                @include transition(all ease .5s);
+
+                a {
+                    background-color: #fff;
+                    height: 35px;
+                    width: 35px;
+                    @include borderRadius(50%);
+                    @extend %center;
+                    display: inline-flex;
+                    margin: 0 5px;
+                    font-size: 14px;
+                    color: #000;
+                    @include transition(all ease .3s);
+
+                    &:hover {
+                        background-color: $main_color;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .details {
+                .title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+//team home
 
 //careers
 section.careers {

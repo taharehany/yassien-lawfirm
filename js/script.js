@@ -104,7 +104,35 @@ $(document).ready(function () {
       },
 
       992: {
-        items: 6,
+        items: 5,
+      }
+    }
+  });
+
+  //team slider owl
+  $(".team-carousel").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    items: 4,
+    nav: false,
+    dots: false,
+    rtl: true,
+    margin: 25,
+    navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
+    responsive: {
+      0: {
+        items: 1,
+      },
+      575: {
+        items: 3,
+      },
+      768: {
+        items: 3,
+      },
+
+      992: {
+        items: 4,
       }
     }
   });
@@ -248,7 +276,18 @@ $(window).on("load", function () {
   //dataTable
   $("#client_dataTable").DataTable({
     "paging": false,
-    "bSort": true, 
+    "bSort": true,
     "ordering": true
   });
+
+  if ($(".wow").length) {
+    let wow = new WOW({
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 0,
+      mobile: false,
+      live: true
+    });
+    wow.init();
+  }
 });

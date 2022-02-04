@@ -18,7 +18,6 @@
             top: 0;
 
             .group {
-                padding: 12px;
                 width: 100%;
                 justify-content: space-between;
 
@@ -89,6 +88,32 @@
         }
     }
 
+    section.about .content .about-image {
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    section.about-in-page {
+        .content {
+            .about-image {
+                padding: 0;
+                float: none;
+                max-width: 100%;
+                img {
+                    min-height: auto;
+                    height: 500px;
+                }
+            }
+        }
+    }
+    section.subscribe {
+        padding: 0;
+    }
+
+    section.about-in-page .content .about-box {
+        margin-bottom: 30px;
+    }
+
     section.search-part {
         .content {
             .form-group {
@@ -136,6 +161,7 @@
 
 @media screen and (max-width: 767px) {
     .main-title {
+        margin-bottom: 2rem;
         .top-title {
             font-size: 16px;
             margin-bottom: 10px;
@@ -152,7 +178,7 @@
         }
 
         h2 {
-            font-size: 26px;
+            // font-size: 26px;
         }
 
         .btns-part {
@@ -189,12 +215,12 @@
     section.about-in-page {
         .content {
             .about-image {
-                padding: 25px;
+                // padding: 25px;
 
                 &::after {
-                    bottom: 50px;
-                    min-width: 100%;
-                    border: 15px solid $main_color;
+                    // bottom: 50px;
+                    // min-width: 100%;
+                    // border: 15px solid $main_color;
                 }
             }
         }
@@ -229,7 +255,7 @@
 
 @media screen and (max-width: 575px) {
     .main-title h2 {
-        font-size: 26px;
+        // font-size: 30px;
     }
 
     .modals {
@@ -325,6 +351,21 @@
     .contact-wrapper-three {
         padding: 40px;
     }
+    footer {
+        .footer-box {
+            &.logo-box {
+                display: none;
+            }
+            &.contact-box {
+                h4 {
+                    display: none;
+                }
+            }
+            .contact {
+                display: none;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -342,7 +383,8 @@
         .top-title {}
 
         h2 {
-            font-size: 20px;
+            font-size: 30px;
+            font-weight: 600;
         }
 
         .btns-part {
@@ -436,6 +478,9 @@
             font-size: 8rem;
         }
     }
+    .fixed-social-links {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -469,6 +514,6 @@
     }
 
     .main-title h2 {
-        font-size: 26px;
+        // font-size: 30px;
     }
 }
