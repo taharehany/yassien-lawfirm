@@ -481,6 +481,7 @@ section.expertise {
 
                 .more {
                     opacity: 1;
+                    @include transform(translateY(0px));
                 }
 
                 img {
@@ -514,20 +515,28 @@ section.expertise {
             .more {
                 margin-top: 0;
                 // opacity: 0;
-                @include transition(all ease 0.3s);
+                @include transition(all ease 0.5s);
                 margin-inline-end: 0;
                 margin-block-start: auto;
+                @include transform(translateY(0px));
+                display: flex;
+                justify-content: flex-end;
+                @include transform(translateY(150px));
 
                 .btn {
-                    background-color: #fff;
+                    border: 2px solid #fff;
+                    padding: 10px 20px;
+                    width: auto;
+                    display: inline-block;
+                    height: auto;
+                    background-color: transparent;
+                    color: #fff;
                     @include borderRadius(0);
-                    width: 35px;
-                    height: 35px;
-                    // margin: auto;
-                    @extend %center;
-                    color: #000;
-                    margin-right: 0;
-                    margin-left: auto;
+                    text-transform: capitalize;
+
+                    &:hover {
+                        background-color: $main_color;
+                    }
                 }
             }
         }
@@ -535,6 +544,8 @@ section.expertise {
 }
 
 //expertise page
+
+//single expertise page
 section.single-expertise {
     padding: $padding_section;
 

@@ -932,7 +932,40 @@ section.about {
 
 //about
 
-// counter numbers
+//expertise home
+section.expertise-home {
+	@extend .expertise;
+	// .content {
+	// 	.exp-box  {
+	// 		&:hover {
+	// 			.more {
+	// 				@include transform(translateY(0px));
+	// 			}
+	// 		}
+	// 		.more {
+	// 			display: flex;
+	// 			justify-content: flex-end;
+	// 			opacity: 0;
+	// 			@include transform(translateY(150px));
+	// 			.btn {
+	// 				border: 2px solid #fff;
+	// 				padding: 10px 20px;
+	// 				width: auto;
+	// 				display: inline-block;
+	// 				height: auto;
+	// 				background-color: transparent;
+	// 				color: #fff;
+	// 				&:hover {
+	// 					background-color: $main_color;
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+//expertise home
+
+//counter numbers
 section.counter-numbers {
 	padding: 200px 0;
 	background: url(../images/bgs/counter-bg.jpg);
@@ -1112,7 +1145,7 @@ section.counter-numbers {
 	}
 }
 
-//about
+//counter numbers
 
 //blogs
 section.blogs {
