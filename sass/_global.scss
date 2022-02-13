@@ -114,17 +114,28 @@ $padding_section: 90px 0;
     position: relative;
 
     h2 {
+        display: inline-block;
         font-size: 40px;
         color: $dark_color;
         position: relative;
         text-transform: capitalize;
         font-weight: 600;
         margin-bottom: 20px;
+        padding-bottom: 15px;
 
         .diff-color {
             color: var(--main-color);
             margin-inline-end: 5px;
             margin-inline-start: 5px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            left: calc(50% - 20%);
+            bottom: 0;
+            height: 2px;
+            width: 40%;
+            background-color: $main_color;
         }
     }
 

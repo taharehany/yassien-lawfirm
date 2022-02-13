@@ -365,7 +365,7 @@ section.about-in-page {
             // margin-inline-start: 30px;
 
             img {
-                min-height: 440px;
+                height: 430px;
             }
         }
 
@@ -457,7 +457,7 @@ section.expertise {
         .exp-box {
             background-color: rgba(11, 25, 66, 0.5);
             padding: 25px 25px;
-            height: 300px;
+            height: 340px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -1039,7 +1039,7 @@ section.knowledge {
             background-color: #fff;
 
             .blog-box {
-                @extend .knowledge-box;
+                // @extend .knowledge-box;
             }
         }
 
@@ -1701,9 +1701,9 @@ section.team {
 //team home
 section.team-home {
     @extend .team;
-    background-color: rgba(21, 92, 180, .05);
-    background-image: url(../images/bgs/pattern-2.png);
-    background-size: cover;
+    background-color: #fff;
+    // background-image: url(../images/bgs/pattern-2.png);
+    // background-size: cover;
     // position: relative;
     // z-index: 1;
 
@@ -1717,6 +1717,40 @@ section.team-home {
     //     background-color: rgba(0, 0, 0, .5);
     //     z-index: -1;
     // }
+
+    .main-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+            margin-bottom: 0;
+
+            &::after {
+                left: 0;
+            }
+        }
+
+        .btns-part {
+            .btn {
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: capitalize;
+                @include transition(all ease 0.3s);
+                @include borderRadius(0);
+                padding: 12px 25px;
+                background-color: $main_color;
+                color: #fff;
+
+                &:hover {
+                    background-color: $dark_color;
+                    color: #fff;
+                    border-color: $dark_color
+                }
+            }
+        }
+    }
+
 
     .content {
         .team-box {
@@ -1772,6 +1806,16 @@ section.team-home {
 section.careers {
     padding: $padding_section;
 
+    .main-title {
+        margin-bottom: 30px;
+
+        h2 {
+            &::after {
+                left: 0;
+            }
+        }
+    }
+
     .sub-title {
         margin-bottom: 30px;
 
@@ -1798,58 +1842,58 @@ section.careers {
 
     .content {
         .career-box {
-            background-color: #fff;
-            padding: 30px;
-            @include borderRadius(30px);
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
-            border: 1px solid #ddd;
+            // background-color: #fff;
+            // padding: 30px;
+            // @include borderRadius(30px);
+            // text-decoration: none;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+            // height: 100%;
+            // border: 1px solid #ddd;
             margin-bottom: 25px;
 
             .details {
-                .head-part {
-                    display: grid;
-                    grid-template-columns: 70px auto;
-                    gap: 15px;
-                    margin-bottom: 20px;
+                // display: grid;
+                // grid-template-columns: 70px auto;
+                // gap: 15px;
+                // margin-bottom: 20px;
 
-                    .icon {
-                        height: 70px;
-                        @include borderRadius(20px);
-                        background-color: brown;
-                        display: block;
-                        overflow: hidden;
+                // .icon {
+                //     height: 70px;
+                //     @include borderRadius(20px);
+                //     background-color: brown;
+                //     display: block;
+                //     overflow: hidden;
 
-                        img {
-                            @extend %fitimage
+                //     img {
+                //         @extend %fitimage
+                //     }
+                // }
+
+                .title {
+                    a {
+                        color: #111;
+                        display: inline-block;
+                        font-size: 20px;
+                        position: relative;
+                        padding-inline-start: 20px;
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            width: 8px;
+                            height: 8px;
+                            top: calc(50% - 4px);
+                            @include borderRadius(50%);
+                            left: 0;
+                            transition: all 500ms ease;
+                            background-color: $main_color;
                         }
                     }
 
-                    .title {
-                        a {
-                            color: #111;
-                            display: inline-block;
-                            font-size: 16px;
-
-                            i {
-                                margin-inline-end: 5px;
-                                font-size: 14px;
-                            }
-                        }
-
-                        h3 {
-                            a {
-                                font-size: 26px;
-                                font-weight: 600;
-                            }
-                        }
-
-                        .place {
-                            margin-inline-end: 30px;
-                        }
+                    .place {
+                        margin-inline-end: 30px;
                     }
                 }
 
@@ -1871,6 +1915,65 @@ section.careers {
 }
 
 //careers
+
+//single careers
+section.single-career {
+    padding: $padding_section;
+
+    .content {
+        .single-career-box {
+            .image {
+                margin-bottom: 30px;
+
+                img {}
+            }
+
+            .time {
+                text-transform: capitalize;
+
+                i {
+                    margin-inline-end: 8px;
+                }
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+                    position: relative;
+                    padding-inline-start: 20px;
+                    list-style: none;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        top: 8px;
+                        @include borderRadius(50%);
+                        left: 0;
+                        transition: all 500ms ease;
+                        background-color: $main_color;
+                    }
+                }
+            }
+        }
+
+        .job-title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 20px 0;
+            text-transform: capitalize;
+        }
+    }
+}
+
+//single careers
 
 //apply
 section.apply {
@@ -1989,6 +2092,91 @@ section.apply {
 }
 
 //apply
+
+//apply in careers
+section.apply-in-careers {
+    @extend .apply;
+    padding: 0 0 50px 0;
+    background-color: #fff;
+
+    .content {
+        max-width: 900px;
+        margin: 0;
+        text-align: initial;
+
+        .main-title {
+            margin-bottom: 2rem;
+            h2 {
+                color: #fff;
+
+                &::after {
+                    left: 0;
+                }
+            }
+        }
+
+        .form-area {
+            box-shadow: none;
+            padding: 25px;
+            background: url(../images/bgs/broad.jpg) center center;
+            background-size: cover;
+            z-index: 1;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(11, 25, 66, 0.7);
+                z-index: -1;
+            }
+
+            .form-group {
+                &.button {
+                    .btn {
+                        padding: 12px 30px;
+                        &:hover {
+                            background-color: $second_color;
+                        }
+                    }
+                }
+
+                label {
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    color: #fff;
+                }
+
+                .form-control {
+                    height: 50px;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    border: none;
+
+                    &::placeholder {
+                        color: $second_color;
+                    }
+                }
+            }
+        }
+
+        .upload {
+            margin-bottom: 30px;
+
+            .input-file .text {
+                color: #fff;
+            }
+        }
+
+        .successfully {
+            padding: 0;
+        }
+    }
+}
+
+//apply in careers
 
 //terms
 section.terms,

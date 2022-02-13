@@ -12,6 +12,13 @@ $(document).ready(function () {
   // fixed header
   $(window).scroll(function () {
     let scroll = $(window).scrollTop();
+    let scrollBottom = $('footer').offset().top;
+    
+    if ((scrollBottom - scroll) < $('footer').height()) {
+      $(".fixed-social-links").fadeOut()
+    } else {
+      $(".fixed-social-links").fadeIn()
+    }
 
     if (scroll > 1) {
       $("header").addClass("fixed");
@@ -240,7 +247,7 @@ $(window).on("load", function () {
   });
 
   //file upload
-  $('.apply input[type="file"]').each(function () {
+  $('.apply input[type="file"], .apply-in-careers input[type="file"]').each(function () {
     // get label text
     var label = $(this).parents('.form-group').find('label').text();
     label = (label) ? label : 'Upload your resume';
