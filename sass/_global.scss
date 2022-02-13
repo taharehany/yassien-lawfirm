@@ -3,7 +3,7 @@ $main_color: var(--main-color);
 $second_color: var(--second-color);
 $dark_color: var(--dark-color);
 $gray: #7a8a9e;
-$padding_section: 90px 0;
+$padding_section: 70px 0;
 //global styles
 
 //mixins
@@ -115,7 +115,7 @@ $padding_section: 90px 0;
 
     h2 {
         display: inline-block;
-        font-size: 40px;
+        font-size: 36px;
         color: $dark_color;
         position: relative;
         text-transform: capitalize;
@@ -180,6 +180,42 @@ $padding_section: 90px 0;
 }
 
 //main title
+
+//more btn
+.btn-more {
+    margin-top: 20px;
+
+    .btn {
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        @include transition(all ease 0.3s);
+        @include borderRadius(0);
+        padding: 0;
+        background-color: transparent;
+        color: $main_color;
+        text-align: center;
+
+        i {
+            font-size: 18px;
+            margin-inline-start: 5px;
+
+            &::before {
+                @include transition(all ease 0.3s);
+                vertical-align: -2px;
+            }
+        }
+
+        &:hover {
+            i {
+                &::before {
+                    @include transform(translateX(10px))
+                }
+            }
+        }
+    }
+}
+//more btn
 
 //to top button
 #toTop {

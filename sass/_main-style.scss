@@ -25,7 +25,7 @@ body {
 	position: fixed;
 	z-index: 99;
 	top: 45%;
-	right: 15px;
+	right: 12px;
 
 	.links {
 		a {
@@ -787,7 +787,7 @@ section.main-slider {
 		color: $main_color;
 		text-transform: capitalize;
 		@include transition(all ease 0.3s);
-		padding: 10px 20px;
+		padding: 12px 20px;
 		color: #fff;
 		position: relative;
 		background-color: $main_color;
@@ -951,25 +951,6 @@ section.expertise-home {
 
 			&::after {
 				left: 0;
-			}
-		}
-
-		.btns-part {
-			.btn {
-				font-size: 14px;
-				font-weight: 600;
-				text-transform: capitalize;
-				@include transition(all ease 0.3s);
-				@include borderRadius(0);
-				padding: 12px 25px;
-				background-color: $main_color;
-				color: #fff;
-
-				&:hover {
-					background-color: $dark_color;
-					color: #fff;
-					border-color: $dark_color
-				}
 			}
 		}
 	}
@@ -1646,6 +1627,7 @@ section.clients {
 		.item {
 			// background-color: rgba(21, 92, 180, 0.02);
 			padding: 15px;
+			background-color: #fff;
 
 			&:hover {
 				cursor: move;
@@ -1685,6 +1667,12 @@ section.subscribe {
 
 		h2 {
 			color: #fff;
+			margin-bottom: 0;
+			padding-bottom: 0;
+
+			&::after {
+				display: none;
+			}
 		}
 	}
 
