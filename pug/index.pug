@@ -4,13 +4,13 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus inventore nobis illum. Harum a voluptates in eius tenetur quidem Lorem ipsum dolor sit amet consectetur adipisicing elit.")
-        meta(property="og:title", content="Hokm Aladalah")
-        meta(property="og:type", content="The type")
-        meta(property="og:url", content="http://url.com/")
-        meta(property="og:image", content="http://image.jpg")
-        meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
-        meta(name="keywords", content="")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(property="og:title" content="Hokm Aladalah")
+        meta(property="og:type" content="The type")
+        meta(property="og:url" content="http://url.com/")
+        meta(property="og:image" content="http://image.jpg")
+        meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+        meta(name="keywords" content="")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         link(rel="shortcut icon" href="images/favicon.png")
         <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
@@ -23,19 +23,21 @@ html(lang="en")
         div(class="main-wrapper")
             //PreLoader
             //- div(class="loader")
-                video(width="auto", height="auto" muted autoplay loop)
-                    source(src="video/loading.webm", type="video/mp4")
-                    source(src="videos/video.ogg", type="video/ogg")
+                video(width="auto" height="auto" muted autoplay loop)
+                    source(src="video/loading.webm" type="video/mp4")
+                    source(src="videos/video.ogg" type="video/ogg")
                     | Your browser does not support the video tag.
+            div(class="loader")
+                span(class="loader-circles")
             //PreLoader
 
             //social links
             div(class="fixed-social-links")
                 div(class="links")
-                    a(href="#" class="facebook bi bi-facebook")
-                    a(href="#" class="twitter bi bi-twitter")
-                    a(href="#" class="instagram bi bi-instagram")
-                    a(href="#" class="linkedin bi bi-linkedin")
+                    a(href="#" aria-label="facebook" class="facebook bi bi-facebook")
+                    a(href="#" aria-label="twitter" class="twitter bi bi-twitter")
+                    a(href="#" aria-label="instagram" class="instagram bi bi-instagram")
+                    a(href="#" aria-label="linkedin" class="linkedin bi bi-linkedin")
             //social links
             include includes/header.pug
             block home_block 

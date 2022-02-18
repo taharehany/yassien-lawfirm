@@ -128,6 +128,7 @@ $padding_section: 70px 0;
             margin-inline-end: 5px;
             margin-inline-start: 5px;
         }
+
         &::after {
             position: absolute;
             content: "";
@@ -159,6 +160,7 @@ $padding_section: 70px 0;
             background-color: $main_color;
             margin-inline-end: 20px;
         }
+
         &::after {
             display: inline-block;
             content: "";
@@ -215,6 +217,7 @@ $padding_section: 70px 0;
         }
     }
 }
+
 //more btn
 
 //to top button
@@ -316,81 +319,10 @@ a {
 
 //global styles
 
-//theme colors
-.theme-colors {
-    position: fixed;
-    top: 30vh;
-    background-color: #fff;
-    left: -92px;
-    z-index: 99;
-    padding: 5px;
-    @include transition(all ease .3s);
-
-    &.move {
-        left: 0;
-    }
-
-    span {
-        font-size: 12px;
-        display: inline-block;
-        margin-bottom: 5px;
-        display: block
-    }
-
-    .show-icon {
-        position: relative;
-        cursor: pointer;
-
-        .icon {
-            position: absolute;
-            right: -41px;
-            top: -5px;
-            height: 35px;
-            width: 35px;
-            line-height: 35px;
-            text-align: center;
-            background-color: #fff;
-
-            i {
-                animation: icon-rotate linear 3s infinite;
-                display: block;
-            }
-        }
-
-    }
-
-    ul {
-        display: grid;
-        grid-template-columns: repeat(3, 25px);
-        gap: 3px;
-        padding: 0;
-        margin-bottom: 10px;
-
-        li {
-            width: 25px;
-            height: 25px;
-            display: inline-block;
-            cursor: pointer;
-            list-style: none;
-        }
-    }
-
-    .pick-color {
-        width: 100%;
-    }
-}
-
-@keyframes icon-rotate {
-    0% {
-        @include transform(rotate(0deg))
-    }
-
-    100% {
-        @include transform(rotate(360deg))
-    }
-}
-
-//theme colors
+$base: #263238;
+$lite:  #FFF;
+$brand: #FF3D00;
+$size: 48px;
 
 //loader
 .loader {
@@ -400,13 +332,49 @@ a {
     width: 100%;
     height: 100%;
     z-index: 999999;
-    background-color: #282828;
+    background-color: $second_color;
     display: flex;
     justify-content: center;
     align-items: center;
 
     video {
         max-width: 100%;
+    }
+
+    .loader-circles {
+        width: 5rem;
+        height: 5rem;
+        display: inline-block;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid $main_color;
+            position: absolute;
+            left: 0;
+            top: 0;
+            animation: animloader14 2s linear infinite;
+        }
+
+        &::after {
+            animation-delay: 1s;
+        }
+    }
+}
+
+@keyframes animloader14 {
+    0% {
+        @include transform(scale(0));
+        opacity: 1;
+    }
+
+    100% {
+        @include transform(scale(1));
+        opacity: 0;
     }
 }
 
