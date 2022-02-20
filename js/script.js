@@ -238,14 +238,6 @@ $(document).ready(function () {
 $(window).on("load", function () {
   $('.loader').delay(500).fadeOut(500);
 
-  //counter up
-  $(".counter").counterUp({
-    delay: 10,
-    time: 1000,
-    offset: 50,
-    beginAt: 100,
-  });
-
   //file upload
   $('.apply input[type="file"], .apply-in-careers input[type="file"]').each(function () {
     // get label text
@@ -291,7 +283,7 @@ $(window).on("load", function () {
     let wow = new WOW({
       boxClass: 'wow',
       animateClass: 'animated',
-      offset: 0,
+      offset: 50,
       mobile: false,
       live: true
     });
