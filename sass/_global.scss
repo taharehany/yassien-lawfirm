@@ -279,6 +279,22 @@ $padding_section: 70px 0;
 
 //if no data
 
+.notfound-txt {
+    text-align: center;
+
+    h3 {
+        color: #d4d8db;
+        margin-bottom: 30px;
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    h4 {
+        color: $main_color;
+        margin-bottom: 10px;
+    }
+}
+
 //global styles
 .btn,
 .btn-close {

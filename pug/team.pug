@@ -76,7 +76,7 @@ block home_block
                             div(class="col-lg-4 col-md-6")
                                 div(class="form-group")
                                     input(type="text" class="form-control" placeholder="Name")
-                            div(class="col-lg-4 col-md-6")
+                            div(class="col-lg-3 col-md-6")
                                 div(class="form-group")
                                     select(class="form-select select2")
                                         option(disabled, selected, class="hidden-option") practice area
@@ -84,7 +84,7 @@ block home_block
                                         option(value="2") option 2
                                         option(value="3") option 3
                                         option(value="4") option 4
-                            div(class="col-lg-4 col-md-6")
+                            div(class="col-lg-3 col-md-6")
                                 div(class="form-group")
                                     select(class="form-select select2")
                                         option(disabled, selected, class="hidden-option") position
@@ -92,6 +92,11 @@ block home_block
                                         option(value="2") option 2
                                         option(value="3") option 3
                                         option(value="4") option 4
+                            div(class="col-lg-2 col-md-6")
+                                div(class="buttons-area")
+                                    button(class="btn" class="submit" type="submit")
+                                        | search
+                                        i(class="bi bi-search")
                 div(class="row")
                     div(class="col-lg-3 col-md-4 col-sm-6")
                         div(class="team-box")
@@ -116,4 +121,8 @@ block home_block
                     h3 Oops!
                     h4
                         strong Your search did not match any results.
+                //more btn
+                div(class="btn-more")
+                    a(href="single-blog.html" class="btn details-btn") more team
+                        i(class="bi bi-chevron-right")
     //team members
