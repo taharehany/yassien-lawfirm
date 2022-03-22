@@ -167,8 +167,40 @@
         </div>
         <!--login modal-->
         <!--success modal-->
+        <div class="modal success-modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="icon"><i class="bi bi-check2"></i></div>
+                <div class="text">
+                  <h5 class="modal-title" id="successModalLabel">success</h5>
+                  <p>thank your for your subscription</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!--success modal-->
         <!--success modal-->
+        <div class="modal failed-modal fade" id="failedModal" tabindex="-1" aria-labelledby="failedModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="icon"><i class="bi bi-x-lg"></i></div>
+                <div class="text">
+                  <h5 class="modal-title" id="failedModalLabel">failed</h5>
+                  <p>example of error message</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <!--success modal-->
         <!--review modal-->
         <div class="modal review-modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
@@ -319,6 +351,8 @@
                 <div class="footer-box logo-box">
                   <div class="text"><a class="footer-logo" href="index.html"> <img class="img-fluid mb-2" data-src="images/logo.png" alt=""></a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium!</p>
+                    <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#successModal">success</button>
+                    <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#failedModal">failed</button>
                   </div>
                 </div>
               </div>
