@@ -1358,7 +1358,7 @@ section.blogs {
 						font-weight: 700;
 						text-transform: capitalize;
 						@extend %max_lines;
-						-webkit-line-clamp: 3;
+						-webkit-line-clamp: 2;
 					}
 				}
 
