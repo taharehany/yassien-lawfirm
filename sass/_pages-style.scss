@@ -415,19 +415,19 @@ section.about-in-page {
                 font-size: 18px;
                 position: relative;
 
-                &::before {
-                    font-family: "bootstrap-icons";
-                    content: "check2";
-                    -webkit-font-smoothing: antialiased;
-                    font-style: normal;
-                    font-variant: normal;
-                    font-weight: 900;
-                    display: inline-block;
-                    color: $main_color;
-                    font-size: 20px;
-                    vertical-align: middle;
-                    margin-inline-end: 8px;
-                }
+                // &::before {
+                //     font-family: "bootstrap-icons";
+                //     content: "check2";
+                //     -webkit-font-smoothing: antialiased;
+                //     font-style: normal;
+                //     font-variant: normal;
+                //     font-weight: 900;
+                //     display: inline-block;
+                //     color: $main_color;
+                //     font-size: 20px;
+                //     vertical-align: middle;
+                //     margin-inline-end: 8px;
+                // }
             }
         }
 
@@ -440,15 +440,15 @@ section.about-in-page {
                 font-weight: 600;
                 position: relative;
 
-                &::before {
-                    content: "";
-                    background-color: $main_color;
-                    width: 12px;
-                    height: 12px;
-                    display: inline-block;
-                    margin-inline-end: 7px;
-                    @include borderRadius(50%)
-                }
+                // &::before {
+                //     content: "";
+                //     background-color: $main_color;
+                //     width: 12px;
+                //     height: 12px;
+                //     display: inline-block;
+                //     margin-inline-end: 7px;
+                //     @include borderRadius(50%)
+                // }
             }
         }
     }
@@ -1393,7 +1393,9 @@ section.team {
 
                 .text {
                     background-color: #fff;
-                    padding: 25px;
+                    padding: 25px 25px 0;
+                    @extend %max_lines;
+                    -webkit-line-clamp: 5;
 
                     p {
                         margin-bottom: 20px;
@@ -1407,6 +1409,10 @@ section.team {
                         }
                     }
 
+                }
+                .team-btn {
+                    background-color: #fff;
+                    padding: 25px;
                     .btn {
                         background-color: $main_color;
                         @include borderRadius(0);
@@ -1417,7 +1423,7 @@ section.team {
                         font-style: 16px;
                         text-transform: capitalize;
                         @include transition(all ease .3s);
-
+    
                         &:hover {
                             background-color: $second_color;
                         }
@@ -1678,6 +1684,7 @@ section.team {
 
         .contact {
             margin-bottom: 30px;
+
             h4 {
                 font-weight: bold;
                 font-size: 20px;
@@ -3015,6 +3022,8 @@ section.contact-in-page {
 
 .contact-info-list .info-item .thumb img {
     width: 100%;
+    height: auto;
+    min-height: 225px;
 }
 
 .contact-info-list .info-item .content {

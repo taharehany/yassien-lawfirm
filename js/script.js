@@ -57,37 +57,6 @@ $(document).ready(function () {
     }
   });
 
-  //why slider owl
-  $(".why-carousel").owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 5000,
-    items: 4,
-    nav: true,
-    dots: false,
-    rtl: true,
-    smartSpeed: 2000,
-    margin: 20,
-    navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-        dots: true,
-      },
-      768: {
-        items: 2,
-      },
-
-      992: {
-        items: 3,
-      },
-      1200: {
-        items: 3,
-      }
-    }
-  });
-
   //clients slider owl
   $(".clients-carousel").owlCarousel({
     loop: true,
@@ -189,24 +158,24 @@ $(document).ready(function () {
   });
 
   //validate form
-  (function () {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    let forms = document.querySelectorAll(".needs-validation")
+  // (function () {
+  //   // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  //   let forms = document.querySelectorAll(".needs-validation")
 
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener("submit", function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          } else {
-            event.preventDefault()
-          }
-          form.classList.add("was-validated")
-        }, false)
-      })
-  })();
+  //   // Loop over them and prevent submission
+  //   Array.prototype.slice.call(forms)
+  //     .forEach(function (form) {
+  //       form.addEventListener("submit", function (event) {
+  //         if (!form.checkValidity()) {
+  //           event.preventDefault()
+  //           event.stopPropagation()
+  //         } else {
+  //           event.preventDefault()
+  //         }
+  //         form.classList.add("was-validated")
+  //       }, false)
+  //     })
+  // })();
 
   //store theme colors in local storage 
   if (!localStorage.getItem("main_color")) {
