@@ -932,19 +932,19 @@ section.about {
 			padding: 0;
 			@include transition(all ease 0.3s);
 
-			&::after {
-				content: "";
-				position: absolute;
-				top: -25px;
-				left: -25px;
-				bottom: 0;
-				background: #fff;
-				border: 10px $main_color solid;
-				min-width: calc(100% - 15px);
-				height: calc(100% - 15px);
-				z-index: -1;
-				// display: none
-			}
+			// &::after {
+			// 	content: "";
+			// 	position: absolute;
+			// 	top: -25px;
+			// 	left: -25px;
+			// 	bottom: 0;
+			// 	background: #fff;
+			// 	border: 10px $main_color solid;
+			// 	min-width: calc(100% - 15px);
+			// 	height: calc(100% - 15px);
+			// 	z-index: -1;
+			// 	// display: none
+			// }
 
 			img {
 				@extend %fitimage;

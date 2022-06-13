@@ -99,144 +99,57 @@
 }
 
 .side-widget {
-    .other-expertise {
-        padding: 20px;
-        background: #F4F5F8;
-        @include borderRadius(7px);
-
-        .title {
-            h4 {
-                position: relative;
-                margin-bottom: 20px;
-                display: block;
-                padding-bottom: 15px;
-                margin-top: 0;
-                text-transform: capitalize;
-                font-weight: 600;
-                font-size: 20px;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    background: $main_color;
-                    width: 70px;
-                    height: 2px;
-                }
-            }
-        }
-
-        ul {
-            padding: 0;
-            margin-bottom: 0;
-
-            li {
-                list-style: none;
-                line-height: 1.8em;
-
-                &:last-child {
-                    padding-bottom: 0;
-                    border-bottom: 0;
-                }
-
-                &:hover {
-                    a {
-                        color: $main_color;
-                    }
-                }
-
-                a {
-                    font-size: 16px;
-                    color: #070143;
-                    font-weight: 500;
-                    padding: 8px 20px;
-                    padding-inline-start: 10px;
-                    padding-inline-end: 25px;
-                    position: relative;
-                    text-transform: capitalize;
-                    @extend %max_lines;
-                    -webkit-line-clamp: 1;
-                    @include borderRadius(7px);
-                    margin-bottom: 5px;
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        top: calc(50% - 8px);
-                        height: 16px;
-                        width: 1px;
-                        background-color: $main_color;
-                        display: none;
-                    }
-
-                    &::after {
-                        font-family: "bootstrap-icons";
-                        content: "chevron-right";
-                        -webkit-font-smoothing: antialiased;
-                        text-transform: none;
-                        font-style: normal;
-                        font-variant: normal;
-                        font-weight: 900;
-                        font-size: 14px;
-                        position: absolute;
-                        right: 10px;
-                        top: 50%;
-                        @include transform(translateY(-50%));
-                        color: $main_color;
-                    }
-
-                    &:hover,
-                    &.active {
-                        background-color: #fff;
-
-                        &::before {
-                            display: inline-block;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-    .person {
-        padding: 15px;
+    .key-contacts {
+        padding: 25px;
         // background-image: url(http://demo.ovathemes.com/athens/wp-content/uploads/2021/12/bg-attorney-single-bio.png);
-        background-color: #213a84;
+        background-color: $second_color;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         @include borderRadius(7px);
         margin-bottom: 25px;
 
-        .image {
-            @include borderRadius(5px);
-            overflow: hidden;
-            margin-bottom: 15px;
-            // width: 250px;
-            // height: 250px;
-            // @include borderRadius(50%);
+        .key-contacts-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px
         }
 
-        .title {
+        .image {
+            @include borderRadius(25px);
+            overflow: hidden;
+            margin-bottom: 15px;
+            border: 3px solid #fff;
+            margin-inline-end: 20px;
+
+            a {
+                display: block;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                -o-object-fit: cover;
+            }
+        }
+
+        .key-contacts-details {
             margin-bottom: 20px;
 
-            h4 {
-                color: #fff;
-                font-size: 24px;
+            .name {
+                color: $main_color;
+                font-size: 18px;
                 text-transform: capitalize;
                 font-weight: 600;
-                font-size: 20px;
+                margin-bottom: 0;
             }
         }
 
         p.pos {
-            color: #fff;
+            color: #afafaf;
             line-height: 1.7em;
-            font-size: 14px;
-            margin-bottom: 0;
+            font-size: 16px;
             @extend %max_lines;
             -webkit-line-clamp: 1;
         }
@@ -252,7 +165,7 @@
 
         .btn {
             background-color: transparent;
-            color: $main_color;
+            color: #fff;
             display: inline-block;
             padding: 0;
             border: 0;
@@ -260,10 +173,9 @@
             z-index: 1;
             position: relative;
             font-size: 16px;
-            font-weight: 700;
 
             &:hover {
-                color: #fff;
+                color: $main_color;
 
                 i {
                     &::before {
@@ -357,6 +269,108 @@
             }
         }
     }
+}
+
+.other-expertise {
+    padding: 20px;
+    background: #F4F5F8;
+    @include borderRadius(7px);
+
+    .title {
+        h4 {
+            position: relative;
+            margin-bottom: 20px;
+            display: block;
+            padding-bottom: 15px;
+            margin-top: 0;
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 20px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: $main_color;
+                width: 70px;
+                height: 2px;
+            }
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin-bottom: 0;
+
+        li {
+            list-style: none;
+            line-height: 1.8em;
+
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+
+            &:hover {
+                a {
+                    color: $main_color;
+                }
+            }
+
+            a {
+                font-size: 16px;
+                color: #070143;
+                font-weight: 500;
+                padding: 8px 20px;
+                padding-inline-start: 10px;
+                padding-inline-end: 25px;
+                position: relative;
+                text-transform: capitalize;
+                @extend %max_lines;
+                -webkit-line-clamp: 1;
+                @include borderRadius(7px);
+                margin-bottom: 5px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: calc(50% - 8px);
+                    height: 16px;
+                    width: 1px;
+                    background-color: $main_color;
+                    display: none;
+                }
+
+                &::after {
+                    font-family: "bootstrap-icons";
+                    content: "chevron-right";
+                    -webkit-font-smoothing: antialiased;
+                    text-transform: none;
+                    font-style: normal;
+                    font-variant: normal;
+                    font-weight: 900;
+                    font-size: 14px;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    color: $main_color;
+                }
+
+                &:hover,
+                &.active {
+                    background-color: #fff;
+
+                    &::before {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 //global page style
@@ -577,12 +591,13 @@ section.single-expertise {
     .content {
         .nav-expertise {
             display: flex;
+            margin-bottom: 35px;
             // align-items: center;
         }
 
         .nav {
-            margin-inline-end: 40px;
-            min-width: 170px;
+            margin-inline-end: 30px;
+            min-width: 250px;
             display: flex;
             flex-direction: column;
 
@@ -1410,9 +1425,11 @@ section.team {
                     }
 
                 }
+
                 .team-btn {
                     background-color: #fff;
                     padding: 25px;
+
                     .btn {
                         background-color: $main_color;
                         @include borderRadius(0);
@@ -1423,7 +1440,7 @@ section.team {
                         font-style: 16px;
                         text-transform: capitalize;
                         @include transition(all ease .3s);
-    
+
                         &:hover {
                             background-color: $second_color;
                         }
@@ -1835,6 +1852,100 @@ section.team-home {
 }
 
 //team home
+
+//team home new
+section.team-home-new {
+    @extend .team;
+    background-color: #fff;
+
+    .main-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h2 {
+            margin-bottom: 0;
+
+            &::after {
+                left: 0;
+            }
+        }
+
+        .btns-part {
+            .btn {
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: capitalize;
+                @include transition(all ease 0.3s);
+                @include borderRadius(0);
+                padding: 12px 25px;
+                background-color: $main_color;
+                color: #fff;
+
+                &:hover {
+                    background-color: $dark_color;
+                    color: #fff;
+                    border-color: $dark_color
+                }
+            }
+        }
+    }
+
+
+    .content {
+        .team-box {
+            margin-bottom: 25px;
+
+            &:hover {
+                .social {
+                    opacity: 1;
+                    @include transform(translateY(-60px))
+                }
+            }
+
+            .image {
+                height: 450px;
+                @include borderRadius(5px);
+
+                img {
+                    @include borderRadius(5px);
+                    @extend %fitimage
+                }
+            }
+
+            .social {
+                opacity: 0;
+                @include transition(all ease .5s);
+
+                a {
+                    background-color: #fff;
+                    height: 35px;
+                    width: 35px;
+                    @include borderRadius(50%);
+                    @extend %center;
+                    display: inline-flex;
+                    margin: 0 5px;
+                    font-size: 14px;
+                    color: #000;
+                    @include transition(all ease .3s);
+
+                    &:hover {
+                        background-color: $main_color;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .details {
+                .title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+//team home new
 
 //careers
 section.careers {
