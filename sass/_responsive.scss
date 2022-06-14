@@ -118,6 +118,9 @@
 
     section.about-in-page .content .about-box {
         margin-bottom: 30px;
+        display: block;
+        
+        &:nth-child(even) {.about-image {margin-inline-start: 0;}}
     }
 
     section.search-part {

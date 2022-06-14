@@ -390,16 +390,18 @@ section.about-in-page {
 
     .content {
         .about-image {
-            float: left;
-            max-width: 550px;
+            // float: left;
+            // max-width: 550px;
             margin-bottom: 25px;
             margin-inline-end: 30px;
             height: 430px;
+            flex: 1 1;
             // margin-inline-start: 30px;
         }
 
         .about-box {
             margin-bottom: 100px;
+            display: flex;
 
             &:last-child {
                 margin-bottom: 0;
@@ -407,9 +409,9 @@ section.about-in-page {
 
             &:nth-child(even) {
                 .about-image {
-                    float: right;
                     margin-inline-end: 0;
                     margin-inline-start: 60px;
+                    order: 2;
 
                     // &::after {
                     //     right: 0;
@@ -424,6 +426,7 @@ section.about-in-page {
             overflow: visible;
             text-overflow: initial;
             -webkit-line-clamp: initial;
+            flex: 1 1;
 
             p {
                 font-size: 18px;
