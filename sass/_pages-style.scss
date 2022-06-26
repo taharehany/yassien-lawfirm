@@ -1894,7 +1894,6 @@ section.team-home-new {
         }
     }
 
-
     .content {
         .team-box {
             margin-bottom: 25px;
@@ -1949,6 +1948,110 @@ section.team-home-new {
 }
 
 //team home new
+
+//new page
+section.new-page {
+   padding: $padding_section;
+    background-color: #fff;
+
+    .main-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        h2 {
+            margin-bottom: 0;
+
+            &::after {
+                left: 0;
+            }
+        }
+
+        .btns-part {
+            .btn {
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: capitalize;
+                @include transition(all ease 0.3s);
+                @include borderRadius(0);
+                padding: 12px 25px;
+                background-color: $main_color;
+                color: #fff;
+
+                &:hover {
+                    background-color: $dark_color;
+                    color: #fff;
+                    border-color: $dark_color
+                }
+            }
+        }
+    }
+
+    .content {
+        .new-page-box {
+            text-align: center;
+            margin-bottom: 25px;
+
+            .image {
+                overflow: hidden;
+                // @include borderRadius(10px);
+                height: 300px;
+                // width: 220px;
+                margin: 0 auto 25px;
+                border: 1px solid #fff;
+
+                a {
+                    cursor: pointer;
+                }
+
+                img {
+                    // border: 2px solid #fff;
+                    // @include borderRadius(10px);
+                    @extend %fitimage;
+                    @include transition(all ease 0.5s);
+
+                    &:hover {
+                        @include transform(scale(1.1))
+                    }
+                }
+            }
+
+            .details {
+                .title {
+                    margin-bottom: 15px;
+
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 600;
+                        color: #111;
+                        transition: all ease 0.3s;
+
+                        &:hover {
+                            color: $main_color;
+                        }
+                    }
+
+                    p {
+                        margin: auto;
+                    }
+                }
+
+                .social {
+                    a {
+                        color: $second_color;
+                        padding: 0 5px;
+
+                        &:hover {
+                            color: $main_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//new page
 
 //careers
 section.careers {

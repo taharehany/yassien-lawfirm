@@ -1,0 +1,54 @@
+extend index
+
+block website_title
+	title #{website_title} | new page
+
+block home_block
+	//breadcrumb
+	nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+		div(class="container")
+			div(class="breadcrumb-title")
+				h2 new page
+			nav(aria-label="breadcrumb")
+				ol(class="breadcrumb")
+					li(class="breadcrumb-item")
+						a(href="#") Home
+					li(class="breadcrumb-item active" aria-current="page") new page
+	//breadcrumb
+
+	//new page
+	section(class="new-page")
+		div(class="container")
+			div(class="content")
+					div(class="row")
+						div(class="col-lg-4 col-md-12")
+							div(class="new-page-box")
+								div(class="image")
+									a(href="#!") 
+										img(src="images/team/01.jpg", class="img-fluid" alt="")
+								div(class="details")
+									div(class="title")
+										a(href="#!") 
+											h3 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+										p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit aut unde, nisi, illo voluptatibus itaque totam consectetur recusandae soluta atque enim porro fuga dolorum? Nostrum nisi inventore adipisci voluptatum ipsam!
+						div(class="col-lg-4 col-md-12")
+							div(class="new-page-box")
+								div(class="image")
+									a(href="#!") 
+										img(src="images/team/02.jpg", class="img-fluid" alt="")
+								div(class="details")
+									div(class="title")
+										a(href="#!") 
+											h3 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+										p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit aut unde, nisi, illo voluptatibus itaque totam consectetur recusandae soluta atque enim porro fuga dolorum? Nostrum nisi inventore adipisci voluptatum ipsam!
+						div(class="col-lg-4 col-md-12")
+							div(class="new-page-box")
+								div(class="image")
+									a(href="#!") 
+										img(src="images/team/01.jpg", class="img-fluid" alt="")
+								div(class="details")
+									div(class="title")
+										a(href="#!") 
+											h3 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+										p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit aut unde, nisi, illo voluptatibus itaque totam consectetur recusandae soluta atque enim porro fuga dolorum? Nostrum nisi inventore adipisci voluptatum ipsam!
+	//new page
